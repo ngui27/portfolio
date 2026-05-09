@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers sensibles
+.env
+config.local.php
+
+# Fichiers inutiles
+*.log
+vinyl_demo.html
+index_1.html
