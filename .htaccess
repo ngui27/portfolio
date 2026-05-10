@@ -1,4 +1,10 @@
-RewriteEngine On 
+RewriteEngine On
+
+# HTTPS redirect
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} !on
 RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Favicon racine → dossier assets
+RewriteRule ^favicon\.ico$ assets/image/favicon/favicon.ico [L]
+RewriteRule ^favicon\.svg$ assets/image/favicon/favicon.svg [L]
