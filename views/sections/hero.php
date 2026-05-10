@@ -4,11 +4,7 @@
       <span class="badge-dot"></span>
       Disponible pour nouveaux projets
     </div>
-    <h1>
-      <span id="hero-l1">Développeur</span><br>
-      <em><span id="hero-l2">Full-Stack</span></em><br>
-      <span id="hero-l3">à Montréal</span>
-    </h1>
+    <h1>Développeur<br><em>Web</em><br>à Montréal</h1>
     <p class="hero-sub">
       Je conçois et développe des sites web et applications sur-mesure pour entrepreneurs et petites entreprises. Du site vitrine à l'outil métier complexe.
     </p>
@@ -30,22 +26,5 @@
         <div class="stat-l">Basé à Montréal</div>
       </div>
     </div>
-  </div>
-
-  <div class="vinyl">
-    <div class="vinyl-scene">
-      <canvas id="canvas-read" width="420" height="420"></canvas>
-      <div class="vinyl-disk" id="disk"></div>
-      <canvas id="canvas-needle" width="400" height="400"></canvas>
-      <div class="vinyl-shine"></div>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="prog"></div>
-    </div>
-    <div class="controls">
-      <span id="timer">0:00 / 5:00</span>
-      <button id="btn">Pause</button>
-    </div>
-
   </div>
 </section>

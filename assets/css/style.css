@@ -727,6 +727,110 @@ section {
   height: 14px;
 }
 
+/* Honeypot : sorti du flux visuel mais pas display:none (les bots le détectent) */
+.ct-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Séparateur "ou" entre le formulaire et le lien email */
+.ct-or {
+  font-size: 0.78rem;
+  color: rgba(245, 240, 232, 0.28);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 1.8rem 0 1.2rem;
+}
+
+/* Champs du formulaire */
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.ct-field label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(245, 240, 232, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.ct-input,
+.ct-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(232, 200, 74, 0.12);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  color: #f0f0f0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.ct-input::placeholder,
+.ct-textarea::placeholder {
+  color: rgba(245, 240, 232, 0.25);
+}
+.ct-input:focus,
+.ct-textarea:focus {
+  border-color: rgba(232, 200, 74, 0.35);
+  background: rgba(232, 200, 74, 0.04);
+}
+.ct-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.ct-submit {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.9rem;
+  border-radius: 100px;
+  background: rgba(232, 200, 74, 0.1);
+  border: 1px solid rgba(232, 200, 74, 0.28);
+  color: var(--ivoire);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.ct-submit:hover:not(:disabled) {
+  background: rgba(232, 200, 74, 0.18);
+  transform: translateY(-2px);
+}
+.ct-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.ct-feedback {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.87rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+.ct-feedback.ok {
+  display: block;
+  background: rgba(50, 200, 80, 0.07);
+  border: 1px solid rgba(50, 200, 80, 0.2);
+  color: rgba(130, 230, 130, 1);
+}
+.ct-feedback.err {
+  display: block;
+  background: rgba(220, 50, 50, 0.07);
+  border: 1px solid rgba(220, 50, 50, 0.2);
+  color: rgba(240, 120, 120, 1);
+}
+
 /* ==============================
    FOOTER — bas de page
    ============================== */
