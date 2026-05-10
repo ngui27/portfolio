@@ -250,16 +250,7 @@ nav {
   width: 20%;
   background: #161616;
   border-radius: 50%;
-  animation: cat-look-around 4s infinite;
-}
-@keyframes cat-look-around {
-  0%   { transform: translate(0); }
-  5%   { transform: translate(50%, -25%); }
-  10%  { transform: translate(50%, -25%); }
-  15%  { transform: translate(-100%, -25%); }
-  20%  { transform: translate(-100%, -25%); }
-  25%  { transform: translate(0, 0); }
-  100% { transform: translate(0, 0); }
+  transition: transform 0.08s ease-out;
 }
 .eye--left .eye-pupil  { right: 30%; }
 .eye--right .eye-pupil { left: 30%; }
