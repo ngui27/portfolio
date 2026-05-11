@@ -20,7 +20,7 @@ class ProjectModel
                 'desc'       => 'Application web complète pour la gestion de bars : suivi de stock en temps réel, réception de marchandises, 124 recettes de cocktails, tableaux de bord avec alertes et rapports. Interface pensée pour des équipes non-techniques.',
                 'chips'      => ['Stock temps réel', '124 recettes cocktails', 'Scanner codes-barres', 'Interface mobile'],
                 'techs'      => ['Symfony', 'PHP', 'MySQL', 'Bootstrap'],
-                'url'        => 'https://espritlibertin.com',
+                'url'        => 'https://gestibar.ca',
                 'link_label' => 'Voir l\'app',
             ],
         ];
