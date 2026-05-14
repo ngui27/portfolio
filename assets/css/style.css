@@ -1039,6 +1039,35 @@ footer p {
   line-height: 1.5;
 }
 
+/* Divulgation lien affilié */
+.article-disclosure {
+  font-size: 0.82rem;
+  color: rgba(245, 240, 232, 0.45);
+  background: rgba(232, 200, 74, 0.05);
+  border-left: 3px solid rgba(232, 200, 74, 0.3);
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Liste ordonnée dans les articles */
+.article-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.article-body ol li {
+  margin-bottom: 0.6rem;
+}
+
+/* H3 dans les articles */
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--jaune);
+  margin: 1.75rem 0 0.5rem;
+}
+
 /* Section aperçu sur la homepage */
 #blog {
   padding: 6rem 5%;
