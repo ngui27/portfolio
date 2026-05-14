@@ -1023,6 +1023,22 @@ footer p {
    BLOG — section aperçu homepage et pages blog
    ============================== */
 
+/* Emplacement image à insérer */
+.img-placeholder {
+  margin: 2rem 0;
+  border: 2px dashed rgba(232, 200, 74, 0.3);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  background: rgba(232, 200, 74, 0.03);
+  text-align: center;
+}
+.img-placeholder figcaption {
+  font-size: 0.85rem;
+  color: rgba(245, 240, 232, 0.4);
+  font-style: italic;
+  line-height: 1.5;
+}
+
 /* Section aperçu sur la homepage */
 #blog {
   padding: 6rem 5%;
