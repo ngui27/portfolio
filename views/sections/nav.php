@@ -13,13 +13,14 @@
         <div class="muzzle"></div>
       </div>
     </div>
-    <a href="#" class="nav-logo">Yéli<span>Dev</span></a>
+    <a href="/" class="nav-logo">Yéli<span>Dev</span></a>
   </div>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#why">À propos</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#projects">Projets</a></li>
+    <li><a href="/#why">À propos</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Discutons →</a>
+  <a href="/#contact" class="nav-cta">Discutons →</a>
 </nav>

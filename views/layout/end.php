@@ -1,5 +1,5 @@
 </div><!-- /.wrap -->
-<script src="assets/js/app.js"></script>
+<script src="/assets/js/app.js"></script>
 <script>
 (function () {
   var form = document.getElementById('contact-form');

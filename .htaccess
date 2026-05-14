@@ -8,3 +8,8 @@ RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Favicon racine → dossier assets
 RewriteRule ^favicon\.ico$ assets/image/favicon/favicon.ico [L]
 RewriteRule ^favicon\.svg$ assets/image/favicon/favicon.svg [L]
+
+# Tout vers index.php sauf fichiers et dossiers existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

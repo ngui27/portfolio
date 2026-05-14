@@ -1,12 +1,14 @@
 <?php
 
 require_once __DIR__ . '/../models/ProjectModel.php';
+require_once __DIR__ . '/../models/ArticleModel.php';
 
 class HomeController
 {
     public function index(): void
     {
-        $projects = (new ProjectModel())->getAll();
+        $projects       = (new ProjectModel())->getAll();
+        $latestArticles = (new ArticleModel())->getLatest(3);
 
         require __DIR__ . '/../views/layout/head.php';
         require __DIR__ . '/../views/sections/nav.php';
@@ -14,6 +16,7 @@ class HomeController
         require __DIR__ . '/../views/sections/services.php';
         require __DIR__ . '/../views/sections/projects.php';
         require __DIR__ . '/../views/sections/why.php';
+        require __DIR__ . '/../views/sections/blog-preview.php';
         require __DIR__ . '/../views/sections/contact.php';
         require __DIR__ . '/../views/sections/footer.php';
         require __DIR__ . '/../views/layout/end.php';
