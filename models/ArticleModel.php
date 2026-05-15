@@ -39,8 +39,9 @@ class ArticleModel
                 'content'   => <<<HTML
 <p>Vous livrez du code propre, performant, bien architecturé — mais est-ce que Google peut réellement l'indexer et le comprendre ? Le <strong>SEO technique</strong> est la couche invisible qui conditionne tout le reste du référencement. Sans ces fondations, même le meilleur contenu reste invisible dans les résultats de recherche. Ce guide passe en revue les points essentiels d'<strong>optimisation SEO</strong> que tout développeur web devrait implémenter dès le lancement d'un site.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : schéma illustrant les 5 piliers du SEO technique (balises, performance, indexation, sécurité, données structurées)</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/5-piliers-seo-technique-infographie.png" alt="Infographie des 5 piliers du SEO technique : balises meta, Core Web Vitals, indexation, sécurité et données structurées" loading="lazy">
+  <figcaption>Les 5 fondations du référencement technique à mettre en place sur tout site web</figcaption>
 </figure>
 
 <h2>1. Les balises meta : le minimum syndical du référencement technique</h2>
@@ -52,8 +53,9 @@ class ArticleModel
 <p>Ces deux éléments sont ce que Google affiche dans ses résultats de recherche (SERP). Un title mal rédigé ou dupliqué sur plusieurs pages est l'une des erreurs de SEO technique les plus fréquentes et les plus pénalisantes.</p>
 <p>Ajoutez également la balise <code>&lt;link rel="canonical"&gt;</code> sur chaque page pour indiquer à Google l'URL de référence et éviter le contenu dupliqué — un problème courant sur les sites avec paramètres d'URL ou versions HTTP/HTTPS coexistantes.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : capture d'un résultat Google montrant title + meta description bien optimisés vs mal optimisés</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/comparatif-serp-title-meta-description-seo.png" alt="Comparatif entre un résultat Google avec title et meta description bien optimisés et un résultat mal optimisé dans les SERPs" loading="lazy">
+  <figcaption>Un title et une meta description bien rédigés augmentent significativement le taux de clic dans les résultats Google</figcaption>
 </figure>
 
 <h2>2. Core Web Vitals : la performance comme signal de classement Google</h2>
@@ -65,8 +67,9 @@ class ArticleModel
 </ul>
 <p>Ces métriques sont mesurées sur de vrais utilisateurs Chrome via le rapport CrUX (Chrome User Experience Report). Un mauvais score sur l'un de ces axes peut faire descendre votre page dans le classement, même si votre contenu est excellent.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : captures des scores PageSpeed Insights montrant LCP, INP et CLS avec les zones verte/orange/rouge</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/core-web-vitals-lcp-inp-cls-pagespeed.png" alt="Scores PageSpeed Insights affichant les métriques Core Web Vitals LCP, INP et CLS avec les seuils vert, orange et rouge" loading="lazy">
+  <figcaption>PageSpeed Insights mesure vos Core Web Vitals en conditions réelles — visez le vert sur les trois métriques</figcaption>
 </figure>
 
 <h2>3. Sitemap XML et robots.txt : guider Google dans votre site</h2>
@@ -84,8 +87,9 @@ class ArticleModel
 </ul>
 <p>Ces marqueurs peuvent générer des <strong>rich snippets</strong> dans les résultats Google — étoiles, FAQ dépliables, extraits de recettes — ce qui augmente significativement le taux de clic (CTR) sans améliorer le classement directement.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : exemple de rich snippet Google avec FAQ dépliable généré par données structurées</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/rich-snippet-google-schema-faq-markup.png" alt="Exemple de rich snippet Google avec section FAQ dépliable générée grâce aux données structurées Schema.org" loading="lazy">
+  <figcaption>Les rich snippets FAQ générés par Schema.org augmentent la visibilité et le taux de clic dans les résultats Google</figcaption>
 </figure>
 
 <h2>5. HTTPS et en-têtes de sécurité : confiance et classement</h2>
@@ -101,8 +105,9 @@ class ArticleModel
 </ul>
 <p>Les URLs propres améliorent la lisibilité pour les utilisateurs, facilitent le partage et donnent un signal sémantique supplémentaire à Google sur le contenu de la page.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : comparatif visuel entre une bonne structure d'URL SEO vs une mauvaise (tableau ou infographie)</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/comparatif-bonne-mauvaise-url-seo.png" alt="Comparatif entre une bonne structure d'URL SEO (courte, lisible, avec mots-clés) et une mauvaise URL avec paramètres et caractères spéciaux" loading="lazy">
+  <figcaption>Une URL propre envoie un signal sémantique à Google et améliore l'expérience utilisateur</figcaption>
 </figure>
 
 <h2>En résumé : la checklist SEO technique du développeur</h2>
@@ -133,8 +138,9 @@ HTML,
                 'content'   => <<<HTML
 <p>Chaque mois, des milliers de Québécois tapent sur Google "développeur web Montréal", "agence web Laval" ou "site vitrine pas cher Québec". Si votre site n'apparaît pas dans ces résultats de <strong>recherche locale</strong>, vous perdez des clients au profit de vos concurrents — sans même le savoir. Le <strong>SEO local à Montréal</strong> n'est pas réservé aux grandes entreprises : c'est précisément l'outil qui permet aux PME et indépendants de rivaliser avec les gros budgets publicitaires.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : capture du Local Pack Google (carte + 3 résultats) sur la recherche "développeur web Montréal"</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/local-pack-google-developpeur-web-montreal.png" alt="Local Pack Google affichant la carte et les 3 premiers résultats locaux pour la recherche développeur web Montréal" loading="lazy">
+  <figcaption>Le Local Pack Google apparaît en tête des résultats sur les requêtes locales — la position la plus cliquée</figcaption>
 </figure>
 
 <h2>Qu'est-ce que le SEO local et pourquoi c'est crucial pour les PME québécoises ?</h2>
@@ -157,8 +163,9 @@ HTML,
   <li>Une <strong>description</strong> de 750 caractères intégrant vos mots-clés locaux naturellement</li>
 </ul>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : exemple d'une fiche Google Business Profile complète et bien optimisée pour une entreprise à Montréal</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/google-business-profile-fiche-complete-seo-local.png" alt="Exemple d'une fiche Google Business Profile complète et bien optimisée pour le SEO local d'une entreprise à Montréal" loading="lazy">
+  <figcaption>Une fiche Google Business Profile complète — nom, catégorie, horaires, photos, description — est la base du SEO local</figcaption>
 </figure>
 
 <h2>La cohérence NAP : Name, Address, Phone partout sur le web</h2>
@@ -174,8 +181,9 @@ HTML,
   <li><strong>Données structurées LocalBusiness</strong> : ajoutez un schema JSON-LD <code>LocalBusiness</code> ou <code>Person</code> avec votre adresse, numéro de téléphone et zone de service.</li>
 </ul>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : exemple de code JSON-LD LocalBusiness avec adresse Montréal et zone de service Québec</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/json-ld-localbusiness-schema-seo-local.png" alt="Exemple de code JSON-LD Schema.org LocalBusiness avec adresse à Montréal et zone de service au Québec pour le SEO local" loading="lazy">
+  <figcaption>Un schéma JSON-LD LocalBusiness bien rempli indique clairement à Google votre zone géographique d'activité</figcaption>
 </figure>
 
 <h2>Les avis clients Google : un signal de classement local sous-estimé</h2>
@@ -197,8 +205,9 @@ HTML,
   <li>Répertoires sectoriels pertinents à votre industrie</li>
 </ul>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : liste visuelle des principaux annuaires locaux québécois à cibler pour le SEO local</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/annuaires-locaux-quebec-citations-seo-local.png" alt="Liste des principaux annuaires locaux québécois à cibler pour construire des citations SEO local : Pages Jaunes, Yelp Canada, Clutch, Chambre de commerce" loading="lazy">
+  <figcaption>Être présent sur les bons annuaires québécois renforce votre autorité locale aux yeux de Google</figcaption>
 </figure>
 
 <h2>Résultat : du trafic qualifié sans budget publicitaire</h2>
@@ -220,8 +229,9 @@ HTML,
                 'content'   => <<<HTML
 <p>En 2026, chercher une information sur Google ne retourne plus toujours une liste de liens. Pour des millions de requêtes, Google affiche désormais une <strong>réponse synthétique générée par l'IA</strong> — les AI Overviews — avant même les résultats organiques classiques. ChatGPT répond à des questions qui auraient jadis mené sur votre site. Perplexity cite directement des sources dans ses réponses. Cette transformation profonde du paysage de la recherche a donné naissance à une nouvelle discipline : le <strong>GEO (Generative Engine Optimization)</strong>.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : capture d'un AI Overview Google (anciennement SGE) avec citation de source, à côté d'une réponse Perplexity avec sources listées</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/ai-overview-google-referencement-ia-generative.png" alt="Capture d'un AI Overview Google avec citation de source web, illustrant le référencement dans les moteurs de recherche basés sur l'IA générative" loading="lazy">
+  <figcaption>Les AI Overviews de Google synthétisent des réponses directement dans les résultats — être cité devient un nouvel objectif SEO</figcaption>
 </figure>
 
 <h2>Qu'est-ce que le GEO (Generative Engine Optimization) ?</h2>
@@ -232,8 +242,9 @@ HTML,
 <p>Selon les études récentes sur les comportements de recherche, les <strong>AI Overviews de Google</strong> apparaissent sur plus de 30 % des requêtes informationnelles. Pour les requêtes de type "comment faire X" ou "qu'est-ce que Y", ce chiffre dépasse 60 %. Les utilisateurs qui obtiennent une réponse directe de l'IA cliquent moins sur les liens organiques — c'est ce qu'on appelle le phénomène de "zero-click search".</p>
 <p>Pour les créateurs de contenu et les développeurs web, cela signifie qu'il ne suffit plus d'être bien classé sur Google. Il faut aussi être la source que l'IA choisit de citer.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : infographie montrant l'évolution des zero-click searches et la part croissante des AI Overviews dans les SERPs 2024-2026</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/zero-click-search-impact-trafic-seo-ia.png" alt="Infographie montrant l'évolution des zero-click searches et l'impact croissant des AI Overviews sur le trafic organique SEO entre 2024 et 2026" loading="lazy">
+  <figcaption>La montée des zero-click searches impose de repenser sa stratégie : être cité par l'IA vaut parfois plus qu'un clic organique</figcaption>
 </figure>
 
 <h2>1. Écrire pour les passages, pas seulement pour les pages</h2>
@@ -254,8 +265,9 @@ HTML,
   <li><strong>Contenu original</strong> : partagez des expériences vécues, des cas réels, des chiffres issus de vos propres projets. L'IA valorise ce que l'on ne peut pas synthétiser d'autres sources.</li>
 </ul>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : exemple d'une section auteur bien structurée avec photo, bio courte et liens de profils professionnels (LinkedIn, GitHub)</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/profil-auteur-eeat-confiance-ia-google.png" alt="Exemple d'une section auteur bien structurée avec photo, biographie courte et liens LinkedIn et GitHub pour renforcer le signal E-E-A-T auprès de Google et des IA" loading="lazy">
+  <figcaption>Un profil auteur bien construit renforce la confiance des IA et de Google envers votre contenu — signal E-E-A-T clé</figcaption>
 </figure>
 
 <h2>3. Le fichier llms.txt : le robots.txt de l'ère IA</h2>
@@ -271,8 +283,9 @@ HTML,
   <li><code>Person</code> — renforce l'autorité de l'auteur auprès des modèles de langage</li>
 </ul>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : exemple de schéma FAQPage en JSON-LD générant un rich snippet dans Google AI Overviews</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/faqpage-schema-ia-generative-seo-geo.png" alt="Exemple de schéma FAQPage en JSON-LD générant un rich snippet dans Google AI Overviews et les moteurs de recherche génératifs" loading="lazy">
+  <figcaption>Le schema FAQPage est l'un des plus efficaces pour apparaître dans les réponses synthétiques des IA de recherche</figcaption>
 </figure>
 
 <h2>5. La cohérence de marque : être mentionné partout pour exister pour l'IA</h2>
@@ -288,8 +301,9 @@ HTML,
 <p>Le <strong>Generative Engine Optimization</strong> ne remplace pas le SEO — il s'y superpose. Un contenu bien optimisé pour Google a généralement de bonnes bases pour les IA : structure claire, mots-clés pertinents, autorité de domaine. Ce que le GEO ajoute, c'est une exigence supplémentaire de clarté, de densité informative et de crédibilité des sources.</p>
 <p>La bonne nouvelle : si vous appliquez déjà les bonnes pratiques SEO, vous avez déjà la moitié du chemin. L'autre moitié, c'est penser votre contenu comme une réponse que l'IA pourrait extraire et citer mot pour mot. Ce changement de perspective transforme la façon dont on écrit — et c'est la compétence clé du référenceur de 2026.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : schéma Venn montrant l'intersection entre les pratiques SEO classiques et les pratiques GEO spécifiques aux IA</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/venn-seo-vs-geo-comparaison-strategie.png" alt="Schéma Venn comparant les pratiques SEO classiques et les pratiques GEO spécifiques aux moteurs de recherche IA comme ChatGPT et Perplexity" loading="lazy">
+  <figcaption>SEO et GEO partagent de nombreuses bases communes — le GEO ajoute une couche de clarté, de structure et d'autorité</figcaption>
 </figure>
 HTML,
             ],
@@ -311,8 +325,9 @@ HTML,
 
 <p>Choisir un <strong>hébergement web</strong> est l'une des premières décisions techniques que vous prenez pour votre site vitrine ou votre boutique en ligne — et l'une des plus structurantes. Un mauvais hébergeur ralentit votre site, nuit à votre SEO, et vous expose à des pannes au mauvais moment. Dans ce guide, je passe en revue les types d'hébergement disponibles, les critères de choix concrets, et je vous explique pourquoi j'ai choisi <strong>o2switch</strong> pour mes projets et ceux de mes clients.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : illustration comparative des types d'hébergement web (mutualisé, VPS, cloud, dédié) sous forme de pyramide ou de tableau</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/types-hebergement-web-partage-vps-dedie-cloud.png" alt="Illustration comparative des 4 types d'hébergement web : hébergement mutualisé, VPS, cloud et serveur dédié avec leurs caractéristiques" loading="lazy">
+  <figcaption>Chaque type d'hébergement répond à des besoins différents — de l'hébergement mutualisé pour débuter au dédié pour les gros projets</figcaption>
 </figure>
 
 <h2>Les différents types d'hébergement web : lequel vous convient ?</h2>
@@ -330,8 +345,9 @@ HTML,
 <h3>Le serveur dédié</h3>
 <p>Un serveur physique entier rien que pour vous. Performances maximales, contrôle total, mais coût élevé et administration complexe. Réservé aux projets d'envergure avec des exigences très spécifiques.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : tableau comparatif des 4 types d'hébergement (prix, performance, complexité, cas d'usage recommandé)</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/comparatif-hebergeurs-o2switch-ovh-siteground-infomaniak.png" alt="Tableau comparatif des hébergeurs web o2switch, OVH, SiteGround et Infomaniak sur les critères prix, performance, support et localisation des serveurs" loading="lazy">
+  <figcaption>Comparatif des principaux hébergeurs francophones — o2switch se distingue par son rapport qualité/prix et ses serveurs NVMe en France</figcaption>
 </figure>
 
 <h2>Les 6 critères pour choisir un bon hébergeur web</h2>
@@ -346,8 +362,9 @@ HTML,
   <li><strong>Rapport qualité/prix</strong> : comparez ce qui est réellement inclus (nombre de domaines, espace disque, emails, bases de données) et pas seulement le prix affiché en gros caractères.</li>
 </ol>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : checklist visuelle des 6 critères de choix d'un hébergeur web, style infographie minimaliste</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/checklist-installation-wordpress-o2switch-cpanel.png" alt="Checklist des étapes d'installation WordPress sur o2switch via cPanel avec les étapes clés de configuration initiale" loading="lazy">
+  <figcaption>o2switch simplifie l'installation WordPress grâce à son outil WPTiger intégré directement dans le cPanel</figcaption>
 </figure>
 
 <h2>Pourquoi j'utilise o2switch pour mes projets clients</h2>
@@ -371,8 +388,9 @@ HTML,
 </ul>
 <p>Pour un développeur qui gère plusieurs clients, c'est idéal : un seul abonnement peut couvrir l'ensemble du portefeuille de sites, ce qui simplifie considérablement la gestion.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : capture du tableau de bord cPanel o2switch montrant les options disponibles (domaines, emails, bases de données, SSL)</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/cpanel-o2switch-interface-guide-sections.png" alt="Interface du cPanel o2switch avec les différentes sections disponibles : gestion des domaines, emails, bases de données MySQL et certificats SSL" loading="lazy">
+  <figcaption>Le cPanel o2switch donne accès à toutes les fonctionnalités d'hébergement depuis une interface centralisée</figcaption>
 </figure>
 
 <h3>Un support client francophone et compétent</h3>
@@ -394,8 +412,9 @@ HTML,
 </ul>
 <p>Pour la majorité des PME et entrepreneurs, l'<strong>offre Cloud</strong> représente le meilleur compromis — des ressources largement suffisantes pour plusieurs sites, à un prix très compétitif.</p>
 
-<figure class="img-placeholder" data-slot="true">
-  <figcaption>📷 Image à insérer : tableau comparatif des 3 offres o2switch (Grow / Cloud / Pro) avec ressources, prix et cas d'usage recommandé</figcaption>
+<figure class="article-img">
+  <img src="/assets/image/blog/offres-o2switch-hebergement-prix-caracteristiques.png" alt="Tableau comparatif des 3 offres d'hébergement o2switch en 2026 : Grow, Cloud et Pro avec leurs ressources vCPU, RAM, prix et cas d'usage recommandé" loading="lazy">
+  <figcaption>Les 3 offres o2switch en 2026 — l'offre Cloud est généralement le meilleur compromis pour les professionnels et agences</figcaption>
 </figure>
 
 <h2>Ce que j'aurais aimé savoir avant de choisir mon premier hébergeur</h2>
