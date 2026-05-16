@@ -68,20 +68,16 @@ $total = count($projectsDesign);
     <article class="project <?= $i % 2 === 1 ? 'reverse' : '' ?> reveal">
 
       <?php if (!empty($d['screen'])): ?>
-      <!-- Capture réelle avec effet scroll 3D -->
-      <div class="cs-container" data-cs>
-        <div class="cs-stage">
-          <div class="cs-card">
-            <div class="cs-card-inner">
-              <img src="<?= htmlspecialchars($d['screen']) ?>"
-                   alt="Capture <?= htmlspecialchars($p['title']) ?>">
-            </div>
-          </div>
-        </div>
+      <!-- Capture réelle -->
+      <div class="project-visual project-visual--img">
+        <img src="<?= htmlspecialchars($d['screen']) ?>"
+             alt="Capture <?= htmlspecialchars($p['title']) ?>">
+        <div class="project-visual-frame"></div>
+        <div class="project-visual-kanji"><?= htmlspecialchars($d['kanji']) ?></div>
       </div>
 
       <?php else: ?>
-      <!-- Visuel placeholder japonais -->
+      <!-- Visuel placeholder -->
       <div class="project-visual">
         <div class="project-visual-sun"></div>
         <div class="project-visual-frame"></div>
