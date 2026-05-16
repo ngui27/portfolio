@@ -1,20 +1,22 @@
 <?php
 $projectsDesign = [
   [
-    'num'   => '01',
-    'year'  => '2025',
-    'type'  => 'WordPress · ACF',
-    'kanji' => '家',
-    'url'   => 'https://kocoonfamily.fr',
-    'label' => 'Voir le site',
+    'num'    => '01',
+    'year'   => '2025',
+    'type'   => 'WordPress · ACF',
+    'kanji'  => '家',
+    'url'    => 'https://kocoonfamily.fr',
+    'label'  => 'Voir le site',
+    'screen' => '/assets/image/kocoon.png',
   ],
   [
-    'num'   => '02',
-    'year'  => '2024',
-    'type'  => 'Symfony · API',
-    'kanji' => '酒',
-    'url'   => 'https://gestibar.ca',
-    'label' => 'Voir l\'app',
+    'num'    => '02',
+    'year'   => '2024',
+    'type'   => 'Symfony · API',
+    'kanji'  => '酒',
+    'url'    => 'https://gestibar.ca',
+    'label'  => 'Voir l\'app',
+    'screen' => null,
   ],
 ];
 ?>
@@ -34,15 +36,33 @@ $projectsDesign = [
     </div>
 
     <?php foreach ($projects as $i => $p):
-      $d = $projectsDesign[$i] ?? ['num' => '0'.($i+1), 'year' => '2025', 'type' => '', 'kanji' => '仕', 'url' => $p['url'], 'label' => $p['link_label']];
+      $d = $projectsDesign[$i] ?? ['num'=>'0'.($i+1),'year'=>'2025','type'=>'','kanji'=>'仕','url'=>$p['url'],'label'=>$p['link_label'],'screen'=>null];
     ?>
     <article class="project <?= $i % 2 === 1 ? 'reverse' : '' ?> reveal">
+
+      <?php if (!empty($d['screen'])): ?>
+      <!-- Effet scroll 3D (ContainerScroll) -->
+      <div class="cs-container" data-cs>
+        <div class="cs-stage">
+          <div class="cs-card">
+            <div class="cs-card-inner">
+              <img src="<?= htmlspecialchars($d['screen']) ?>"
+                   alt="Capture <?= htmlspecialchars($p['title']) ?>">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php else: ?>
+      <!-- Visuel placeholder -->
       <div class="project-visual">
         <div class="project-visual-sun"></div>
         <div class="project-visual-frame"></div>
         <div class="project-visual-kanji"><?= htmlspecialchars($d['kanji']) ?></div>
         <div class="project-visual-label">[ Capture — <?= htmlspecialchars($p['title']) ?> ]</div>
       </div>
+      <?php endif; ?>
+
       <div>
         <div class="project-meta">
           <span class="num"><?= htmlspecialchars($d['num']) ?> / <?= count($projects) ?></span>

@@ -647,6 +647,48 @@ html.js-reveal .reveal.in {
   text-transform: uppercase;
   z-index: 2;
 }
+
+/* ====== ContainerScroll — effet 3D au scroll ====== */
+.cs-container {
+  perspective: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-stage {
+  width: 100%;
+  transform-style: preserve-3d;
+}
+.cs-card {
+  border-radius: 20px;
+  border: 3px solid #444;
+  background: #111;
+  padding: 8px;
+  box-shadow:
+    0 0 #0000004d,
+    0 9px 20px #0000004a,
+    0 37px 37px #00000042,
+    0 84px 50px #00000026,
+    0 149px 60px #0000000a;
+  transform-origin: top center;
+  will-change: transform;
+  transition: box-shadow 0.1s ease;
+}
+.cs-card-inner {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #222;
+}
+.cs-card-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 900px) {
+  .cs-card { border-radius: 14px; padding: 5px; }
+}
 .project-visual-kanji {
   position: absolute;
   font-family: var(--font-display);

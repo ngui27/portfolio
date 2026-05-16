@@ -28,6 +28,37 @@ document.addEventListener('DOMContentLoaded', function () {
     moon.style.display = html.dataset.theme === 'light' ? '' : 'none';
   }
 
+  // ---------- ContainerScroll 3D ----------
+  var csContainers = document.querySelectorAll('[data-cs]');
+  if (csContainers.length) {
+    var isMobile = window.innerWidth <= 768;
+    window.addEventListener('resize', function () { isMobile = window.innerWidth <= 768; });
+
+    var animateCS = function () {
+      csContainers.forEach(function (container) {
+        var card = container.querySelector('.cs-card');
+        if (!card) return;
+        var rect = container.getBoundingClientRect();
+        var vh = window.innerHeight;
+
+        // progress 0 (carte en haut du viewport) → 1 (carte en bas)
+        var progress = 1 - Math.max(0, Math.min(1, rect.top / vh));
+
+        // rotateX : 20deg → 0deg
+        var rotateX = 20 * (1 - progress);
+        // scale : 1.05 → 1  (mobile : 0.7 → 0.9)
+        var scaleMin = isMobile ? 0.7 : 1.05;
+        var scaleMax = isMobile ? 0.9 : 1.0;
+        var scale = scaleMin + (scaleMax - scaleMin) * progress;
+
+        card.style.transform = 'rotateX(' + rotateX + 'deg) scale(' + scale + ')';
+      });
+    };
+
+    window.addEventListener('scroll', animateCS, { passive: true });
+    animateCS();
+  }
+
   // ---------- Nav pill (sliding cursor) ----------
   var pillWrap = document.getElementById('nav-pill-wrap');
   var pill = document.getElementById('nav-pill');
