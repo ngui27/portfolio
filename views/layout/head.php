@@ -1,6 +1,6 @@
 <?php
-$page_title       = $page_title       ?? 'YéliDev — Développeur Full-Stack à Montréal';
-$page_description = $page_description ?? 'YéliDev — Développeur full-stack basé à Montréal. Je crée des sites vitrines, applications web et boutiques en ligne pour PME et entrepreneurs. Contactez-moi pour votre projet.';
+$page_title       = $page_title       ?? 'YéliDev — Développeur Web à Montréal';
+$page_description = $page_description ?? 'YéliDev — Développeur web à Montréal. Sites vitrines, applications web et outils personnalisés pour PME et entrepreneurs. Devis gratuit.';
 $page_canonical   = $page_canonical   ?? 'https://yelidev.ca/';
 $page_og_type     = $page_og_type     ?? 'website';
 ?>
@@ -76,8 +76,8 @@ $page_og_type     = $page_og_type     ?? 'website';
     "@type": "Person",
     "name": "YéliDev",
     "url": "https://yelidev.ca/",
-    "jobTitle": "Développeur Full-Stack",
-    "description": "Développeur full-stack basé à Montréal. Sites vitrines, applications web et boutiques en ligne pour PME et entrepreneurs.",
+    "jobTitle": "Développeur Web",
+    "description": "Développeur web à Montréal. Sites vitrines, applications web et outils personnalisés pour PME et entrepreneurs.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Montréal",

@@ -14,7 +14,7 @@
         </h2>
         <div class="about-body">
           <p>
-            Développeur full-stack à Montréal depuis sept ans. Je travaille avec des
+            Développeur web à Montréal depuis sept ans. Je travaille avec des
             entrepreneurs et des petites entreprises au Québec et en France — sites
             vitrines, outils sur mesure, selon ce dont ils ont vraiment besoin.
           </p>

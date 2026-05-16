@@ -12,7 +12,7 @@
         <span class="underline">interlocuteur.</span>
       </h1>
       <p class="hero-sub reveal" data-delay="2">
-        Développeur web full-stack à Montréal. Je crée des sites vitrines, applications
+        Développeur web à Montréal. Je crée des sites vitrines, applications
         et boutiques en ligne pour les PME et entrepreneurs d'ici — code propre, prix
         transparents, livraison soignée.
       </p>
