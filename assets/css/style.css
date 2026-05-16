@@ -623,29 +623,27 @@ html.js-reveal .reveal.in {
   overflow: hidden;
 }
 
-/* Variante avec image réelle */
+/* Variante avec image réelle — image entière visible, sans cadre */
 .project-visual--img {
   background: none;
-  border: 3px solid var(--vermillion); /* cadre = bordure extérieure */
+  border: none;
   aspect-ratio: auto;
-  height: 420px;
-}
-@media (max-width: 900px) {
-  .project-visual--img { height: 260px; }
+  height: auto;
+  overflow: visible;
 }
 .project-visual--img img {
-  position: absolute;
-  inset: 0;
+  position: static;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  object-fit: unset;
 }
 .project-visual--img::before { display: none; }
 .project-visual--img .project-visual-kanji {
+  position: absolute;
   z-index: 3;
-  color: #fff;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.7);
+  color: var(--fg);
+  text-shadow: none;
 }
 
 .project-visual::before {
