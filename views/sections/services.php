@@ -1,31 +1,3 @@
-<!-- Marquee techno -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>
-      WordPress <span class="marquee-dot"></span>
-      Symfony <span class="marquee-dot"></span>
-      React <span class="marquee-dot"></span>
-      Next.js <span class="marquee-dot"></span>
-      Laravel <span class="marquee-dot"></span>
-      TypeScript <span class="marquee-dot"></span>
-      Node.js <span class="marquee-dot"></span>
-      PostgreSQL <span class="marquee-dot"></span>
-      Tailwind <span class="marquee-dot"></span>
-      Shopify <span class="marquee-dot"></span>
-      WordPress <span class="marquee-dot"></span>
-      Symfony <span class="marquee-dot"></span>
-      React <span class="marquee-dot"></span>
-      Next.js <span class="marquee-dot"></span>
-      Laravel <span class="marquee-dot"></span>
-      TypeScript <span class="marquee-dot"></span>
-      Node.js <span class="marquee-dot"></span>
-      PostgreSQL <span class="marquee-dot"></span>
-      Tailwind <span class="marquee-dot"></span>
-      Shopify
-    </span>
-  </div>
-</div>
-
 <!-- Services -->
 <section id="services" class="section">
   <div class="bg-kanji" style="right:-6vw;top:20%">働</div>
