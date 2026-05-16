@@ -66,6 +66,9 @@ $page_og_type     = $page_og_type     ?? 'website';
   <meta name="theme-color" content="#F2EDE2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0C0908" media="(prefers-color-scheme: dark)">
 
+  <!-- Lenis smooth scroll -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -87,3 +90,4 @@ $page_og_type     = $page_og_type     ?? 'website';
 
 </head>
 <body>
+<div class="site-wrap">

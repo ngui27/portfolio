@@ -1,3 +1,32 @@
+// ---------- Lenis smooth scroll ----------
+(function () {
+  if (typeof Lenis === 'undefined') return;
+  var lenis = new Lenis({
+    duration: 1.25,
+    easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+    smoothWheel: true,
+    smoothTouch: false,
+  });
+  window.__lenis = lenis;
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // Lenis + ancres : smooth scroll vers les sections
+  document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var hash = a.getAttribute('href').replace(/^\//, '');
+      var target = document.querySelector(hash);
+      if (!target) return;
+      e.preventDefault();
+      lenis.scrollTo(target, { offset: -80, duration: 1.4 });
+    });
+  });
+})();
+
 // ---------- Theme (dark / light) ----------
 (function () {
   var html = document.documentElement;
