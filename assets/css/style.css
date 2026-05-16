@@ -354,12 +354,16 @@ html.js-reveal .reveal.in {
 
 .hero-title {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: calc(clamp(52px, 8vw, 132px) * var(--title-scale, 1));
-  line-height: 0.96;
-  letter-spacing: -0.035em;
+  font-weight: 700;
+  font-size: calc(clamp(36px, 5vw, 76px) * var(--title-scale, 1));
+  line-height: 1.06;
+  letter-spacing: -0.025em;
   margin: 0 0 32px;
   text-wrap: balance;
+  color: var(--ink);
+}
+[data-theme="dark"] .hero-title {
+  color: #F0EAD9;
 }
 .hero-title .accent {
   color: var(--vermillion);
@@ -1306,6 +1310,79 @@ main, .footer { position: relative; z-index: 1; }
   font-size: 28px;
   cursor: pointer;
   line-height: 1;
+}
+
+/* ---------- Hero filigrane (image 3 en background discret) ---------- */
+.hero { isolation: isolate; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/image/3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero > .container { position: relative; z-index: 2; }
+[data-theme="dark"] .hero::before {
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+@media (max-width: 720px) {
+  .hero::before { opacity: 0.07; }
+  [data-theme="dark"] .hero::before { opacity: 0.14; }
+}
+
+/* ---------- Projets filigrane (image 2 en background discret) ---------- */
+#projets { isolation: isolate; overflow: hidden; }
+#projets::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/image/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+[data-theme="dark"] #projets::before {
+  opacity: 0.14;
+  mix-blend-mode: screen;
+}
+@media (max-width: 720px) {
+  #projets::before { opacity: 0.05; }
+  [data-theme="dark"] #projets::before { opacity: 0.10; }
+}
+
+/* ---------- Journal filigrane (image 5 en background discret) ---------- */
+#blog { isolation: isolate; overflow: hidden; }
+#blog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/image/5.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.30;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+[data-theme="dark"] #blog::before {
+  opacity: 0.14;
+  mix-blend-mode: screen;
+}
+@media (max-width: 720px) {
+  #blog::before { opacity: 0.05; }
+  [data-theme="dark"] #blog::before { opacity: 0.10; }
 }
 
 /* 404 page */
