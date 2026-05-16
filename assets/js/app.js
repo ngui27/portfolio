@@ -109,6 +109,67 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000);
   }
 
+  // ---------- Journal Carousel ----------
+  var jcTrack  = document.getElementById('jc-track');
+  var jcPrev   = document.getElementById('jc-prev');
+  var jcNext   = document.getElementById('jc-next');
+  var jcOverlay = document.getElementById('jc-overlay');
+  var jcClose  = document.getElementById('jc-overlay-close');
+
+  if (jcTrack && jcPrev && jcNext) {
+    var SCROLL_AMOUNT = 404;
+
+    var updateArrows = function () {
+      jcPrev.disabled = jcTrack.scrollLeft <= 0;
+      jcNext.disabled = jcTrack.scrollLeft >= jcTrack.scrollWidth - jcTrack.clientWidth - 1;
+    };
+    updateArrows();
+    jcTrack.addEventListener('scroll', updateArrows, { passive: true });
+
+    jcPrev.addEventListener('click', function () {
+      jcTrack.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+    jcNext.addEventListener('click', function () {
+      jcTrack.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+
+    // Cartes cliquables → overlay
+    jcTrack.querySelectorAll('.jc-card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        var d = card.dataset;
+        document.getElementById('jc-overlay-cat').textContent    = d.cat;
+        document.getElementById('jc-overlay-date').textContent   = d.date + ' · ' + d.read + ' min';
+        document.getElementById('jc-overlay-excerpt').textContent = d.excerpt;
+        document.getElementById('jc-overlay-title').textContent  = d.title;
+        var link = document.getElementById('jc-overlay-link');
+        link.href = '/blog/' + d.slug;
+
+        // Fond image dans l'overlay
+        var bg = document.getElementById('jc-overlay-bg');
+        bg.style.cssText = 'background-image:url(' + d.img + ');background-size:cover;background-position:center;opacity:0.08;';
+
+        jcOverlay.classList.add('open');
+        jcOverlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Fermer l'overlay
+    var closeOverlay = function () {
+      jcOverlay.classList.remove('open');
+      jcOverlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    if (jcClose) jcClose.addEventListener('click', closeOverlay);
+    jcOverlay.addEventListener('click', function (e) {
+      if (e.target === jcOverlay) closeOverlay();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && jcOverlay.classList.contains('open')) closeOverlay();
+    });
+  }
+
   // ---------- Contact form ----------
   var form = document.getElementById('contact-form');
   if (form) {
