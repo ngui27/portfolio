@@ -28,8 +28,8 @@
     <div class="hero-visual reveal" data-delay="2">
       <div class="hero-vertical-kanji">開発<span class="red">者</span></div>
       <div class="sun hero-sun"></div>
-      <div class="hero-portrait">
-        <span class="placeholder-text">[ Portrait — à remplacer ]</span>
+      <div class="hero-portrait hero-portrait--img">
+        <img src="/assets/image/profil.png" alt="Ngui — Développeur web samurai à Montréal">
       </div>
       <div class="hero-frame"></div>
     </div>
