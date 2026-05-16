@@ -5,7 +5,7 @@ $page_canonical   = $page_canonical   ?? 'https://yelidev.ca/';
 $page_og_type     = $page_og_type     ?? 'website';
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,8 +33,21 @@ $page_og_type     = $page_og_type     ?? 'website';
   <meta name="twitter:description" content="<?= htmlspecialchars($page_description) ?>">
   <meta name="twitter:image" content="https://yelidev.ca/assets/image/og-preview.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts — design japonais -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Inline theme init to avoid flash -->
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('yelidev-theme') || 'light';
+        document.documentElement.dataset.theme = t;
+      } catch(e){}
+    })();
+  </script>
 
   <!-- Favicons -->
   <link rel="icon" href="/assets/image/favicon/favicon.ico" sizes="any">
@@ -49,8 +62,9 @@ $page_og_type     = $page_og_type     ?? 'website';
   <!-- Manifest -->
   <link rel="manifest" href="/assets/image/favicon/site.webmanifest">
 
-  <!-- Theme -->
-  <meta name="theme-color" content="#0f172a">
+  <!-- Theme color (adapte au mode clair/sombre) -->
+  <meta name="theme-color" content="#F2EDE2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0C0908" media="(prefers-color-scheme: dark)">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -73,4 +87,3 @@ $page_og_type     = $page_og_type     ?? 'website';
 
 </head>
 <body>
-<div class="wrap">

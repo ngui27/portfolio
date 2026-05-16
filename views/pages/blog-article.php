@@ -4,8 +4,8 @@
     <a href="/blog" class="article-back">← Retour au blog</a>
     <div class="article-meta">
       <span class="blog-tag"><?= htmlspecialchars($article['category']) ?></span>
-      <span class="blog-date"><?= date('j F Y', strtotime($article['date'])) ?></span>
-      <span class="blog-read"><?= (int)$article['read_time'] ?> min de lecture</span>
+      <span><?= date('j F Y', strtotime($article['date'])) ?></span>
+      <span><?= (int)$article['read_time'] ?> min de lecture</span>
     </div>
     <h1 class="article-title"><?= htmlspecialchars($article['title']) ?></h1>
     <p class="article-excerpt"><?= htmlspecialchars($article['excerpt']) ?></p>
@@ -17,7 +17,7 @@
 
   <footer class="article-footer">
     <p>Vous avez des questions sur le SEO ou le GEO de votre site ?</p>
-    <a href="/#contact" class="btn-primary">Discutons de votre projet →</a>
+    <a href="/#contact" class="btn btn-primary">Discutons de votre projet →</a>
   </footer>
 
 </article>
