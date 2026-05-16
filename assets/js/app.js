@@ -28,6 +28,23 @@ document.addEventListener('DOMContentLoaded', function () {
     moon.style.display = html.dataset.theme === 'light' ? '' : 'none';
   }
 
+  // ---------- Nav pill (sliding cursor) ----------
+  var pillWrap = document.getElementById('nav-pill-wrap');
+  var pill = document.getElementById('nav-pill');
+  if (pillWrap && pill) {
+    var navItems = pillWrap.querySelectorAll('li');
+    navItems.forEach(function (li) {
+      li.addEventListener('mouseenter', function () {
+        pill.style.left  = li.offsetLeft + 'px';
+        pill.style.width = li.offsetWidth + 'px';
+        pill.style.opacity = '1';
+      });
+    });
+    pillWrap.addEventListener('mouseleave', function () {
+      pill.style.opacity = '0';
+    });
+  }
+
   // ---------- Nav scroll ----------
   var nav = document.querySelector('.nav');
   if (nav) {

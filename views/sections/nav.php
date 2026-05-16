@@ -1,23 +1,5 @@
 <!-- Ink background (fixed, derrière tout) -->
 <div class="ink-bg" aria-hidden="true">
-  <!-- Montagnes brumeuses -->
-  <svg class="ink-mountains-far" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="mistGrad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="currentColor" stop-opacity="0"/>
-        <stop offset="60%" stop-color="currentColor" stop-opacity="0.18"/>
-        <stop offset="100%" stop-color="currentColor" stop-opacity="0.32"/>
-      </linearGradient>
-      <linearGradient id="mistGrad2" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="currentColor" stop-opacity="0"/>
-        <stop offset="50%" stop-color="currentColor" stop-opacity="0.28"/>
-        <stop offset="100%" stop-color="currentColor" stop-opacity="0.55"/>
-      </linearGradient>
-    </defs>
-    <path d="M 0 540 Q 80 460 180 480 T 360 440 T 540 460 T 720 410 T 900 440 T 1080 420 T 1260 450 T 1440 410 T 1620 440 T 1800 420 T 1920 450 L 1920 1080 L 0 1080 Z" fill="url(#mistGrad)"/>
-    <path d="M 0 720 Q 60 640 140 660 Q 200 540 280 580 Q 380 480 480 540 Q 580 600 680 580 Q 780 480 880 540 Q 1000 620 1100 580 Q 1200 500 1320 560 Q 1440 620 1560 580 Q 1680 520 1800 580 Q 1880 620 1920 600 L 1920 1080 L 0 1080 Z" fill="url(#mistGrad2)"/>
-  </svg>
-
   <!-- Bambou droit -->
   <svg class="ink-bamboo" viewBox="0 0 400 1200" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
     <g stroke="currentColor" stroke-linecap="round" fill="none">
@@ -93,13 +75,14 @@
       Yéli<span class="dot"></span>Dev
       <span class="kanji">和</span>
     </a>
-    <div class="nav-links">
-      <a href="/#services">Services</a>
-      <a href="/#projets">Projets</a>
-      <a href="/#apropos">À propos</a>
-      <a href="/blog">Blog</a>
-      <a href="/#contact">Contact</a>
-    </div>
+    <ul class="nav-links nav-pill-wrap" id="nav-pill-wrap">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#projets">Projets</a></li>
+      <li><a href="/#apropos">À propos</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <span class="nav-pill" id="nav-pill" aria-hidden="true"></span>
+    </ul>
     <div class="nav-right">
       <button class="theme-toggle" onclick="window.__toggleTheme()" aria-label="Changer le thème">
         <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
