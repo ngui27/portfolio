@@ -1385,6 +1385,31 @@ main, .footer { position: relative; z-index: 1; }
   [data-theme="dark"] #blog::before { opacity: 0.10; }
 }
 
+/* ---------- Footer filigrane (image 6 pivotée en background discret) ---------- */
+.footer { isolation: isolate; overflow: hidden; }
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/image/6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+.footer > .container { position: relative; z-index: 2; }
+[data-theme="dark"] .footer::before {
+  opacity: 0.12;
+  mix-blend-mode: screen;
+}
+@media (max-width: 720px) {
+  .footer::before { opacity: 0.04; }
+  [data-theme="dark"] .footer::before { opacity: 0.09; }
+}
+
 /* 404 page */
 .not-found {
   min-height: 70vh;
@@ -1403,6 +1428,19 @@ main, .footer { position: relative; z-index: 1; }
   letter-spacing: -0.03em;
   margin: 0 0 24px;
 }
+/* ---------- Descriptions en noir pour lisibilité sur fond peint ---------- */
+/* Cible uniquement les textes de corps (pas les titres h1-h4) */
+[data-theme="light"] .section-lede,
+[data-theme="light"] .hero-sub,
+[data-theme="light"] .service-desc,
+[data-theme="light"] .project-desc,
+[data-theme="light"] .about-body p,
+[data-theme="light"] .blog-excerpt,
+[data-theme="light"] .blog-meta,
+[data-theme="light"] .project-meta {
+  color: #1a1714;
+}
+
 .not-found p {
   font-size: 18px;
   color: var(--muted);
