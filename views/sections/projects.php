@@ -7,7 +7,7 @@ $projectsDesign = [
     'kanji'  => '家',
     'url'    => 'https://kocoonfamily.fr',
     'label'  => 'Voir le site',
-    'screen' => null, // screenshot à venir
+    'screen' => '/assets/image/ImageProjet/kocoonfamily.png',
   ],
   [
     'num'    => '02',
@@ -16,16 +16,16 @@ $projectsDesign = [
     'kanji'  => '酒',
     'url'    => 'https://gestibar.ca',
     'label'  => 'Voir l\'app',
-    'screen' => null,
+    'screen' => '/assets/image/ImageProjet/gestibar.png',
   ],
   [
     'num'    => '03',
     'year'   => '2025',
-    'type'   => 'SaaS · Laravel',
+    'type'   => 'Node.js · SaaS',
     'kanji'  => '宿',
     'url'    => 'https://hostbook.dev',
     'label'  => 'Voir le projet',
-    'screen' => null, // screenshot à venir
+    'screen' => '/assets/image/ImageProjet/hostbook.png',
   ],
   [
     'num'    => '04',
@@ -34,7 +34,7 @@ $projectsDesign = [
     'kanji'  => '管',
     'url'    => 'https://kocoonfamily.fr/kocoon-manager',
     'label'  => 'Voir le plugin',
-    'screen' => null, // screenshot à venir
+    'screen' => '/assets/image/ImageProjet/kocoonManager.png',
   ],
 ];
 $total = count($projectsDesign);
