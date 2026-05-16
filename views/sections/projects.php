@@ -1,50 +1,48 @@
 <?php
 $projectsDesign = [
   [
-    'num'      => '01',
-    'year'     => '2025',
-    'type'     => 'WordPress · Elementor',
-    'kanji'    => '家',
-    'url'      => 'https://kocoonfamily.fr',
-    'label'    => 'Voir le site',
-    'screen'   => '/assets/image/ImageProjet/kocoonfamily.png',
-    'img_pos'  => 'center 12%', // skip whitespace du haut du screenshot
+    'num'    => '01',
+    'year'   => '2025',
+    'type'   => 'WordPress · Elementor',
+    'kanji'  => '家',
+    'url'    => 'https://kocoonfamily.fr',
+    'label'  => 'Voir le site',
+    'screen' => '/assets/image/ImageProjet/kocoonfamily.png',
   ],
   [
-    'num'      => '02',
-    'year'     => '2024',
-    'type'     => 'Symfony · API',
-    'kanji'    => '酒',
-    'url'      => 'https://gestibar.ca',
-    'label'    => 'Voir l\'app',
-    'screen'   => '/assets/image/ImageProjet/gestibar.png',
-    'img_pos'  => 'top center',
+    'num'    => '02',
+    'year'   => '2024',
+    'type'   => 'Symfony · API',
+    'kanji'  => '酒',
+    'url'    => 'https://gestibar.ca',
+    'label'  => 'Voir l\'app',
+    'screen' => '/assets/image/ImageProjet/gestibar.png',
   ],
   [
-    'num'      => '03',
-    'year'     => '2025',
-    'type'     => 'Node.js · SaaS',
-    'kanji'    => '宿',
-    'url'      => 'https://hostbook.dev',
-    'label'    => 'Voir le projet',
-    'screen'   => '/assets/image/ImageProjet/hostbook.png',
-    'img_pos'  => 'top center',
+    'num'    => '03',
+    'year'   => '2025',
+    'type'   => 'Node.js · SaaS',
+    'kanji'  => '宿',
+    'url'    => 'https://hostbook.dev',
+    'label'  => 'Voir le projet',
+    'screen' => '/assets/image/ImageProjet/hostbook.png',
   ],
   [
-    'num'      => '04',
-    'year'     => '2025',
-    'type'     => 'Plugin WordPress',
-    'kanji'    => '管',
-    'url'      => 'https://kocoonfamily.fr/kocoon-manager',
-    'label'    => 'Voir le plugin',
-    'screen'   => '/assets/image/ImageProjet/kocoonManager.png',
-    'img_pos'  => 'top center',
+    'num'    => '04',
+    'year'   => '2025',
+    'type'   => 'Plugin WordPress',
+    'kanji'  => '管',
+    'url'    => 'https://kocoonfamily.fr/kocoon-manager',
+    'label'  => 'Voir le plugin',
+    'screen' => '/assets/image/ImageProjet/kocoonManager.png',
   ],
 ];
-$total = count($projectsDesign);
+$total = count($projects);
 ?>
+
 <section id="projets" class="section">
   <div class="container">
+
     <div class="projects-header reveal">
       <div>
         <div class="section-eyebrow">Réalisations <span class="kanji">作品</span></div>
@@ -58,57 +56,64 @@ $total = count($projectsDesign);
       </p>
     </div>
 
-    <?php foreach ($projects as $i => $p):
-      $d = $projectsDesign[$i] ?? [
-        'num'   => str_pad($i+1, 2, '0', STR_PAD_LEFT),
-        'year'  => '2025',
-        'type'  => '',
-        'kanji' => '仕',
-        'url'   => $p['url'],
-        'label' => $p['link_label'],
-        'screen'=> null,
-      ];
-    ?>
-    <article class="project <?= $i % 2 === 1 ? 'reverse' : '' ?> reveal">
+    <!-- Circular Carousel -->
+    <div class="ct-wrap reveal">
+      <div class="ct-grid">
 
-      <?php if (!empty($d['screen'])): ?>
-      <!-- Capture réelle : cadre = bordure extérieure du conteneur -->
-      <div class="project-visual project-visual--img">
-        <img src="<?= htmlspecialchars($d['screen']) ?>"
-             alt="Capture <?= htmlspecialchars($p['title']) ?>"
-             style="object-position:<?= htmlspecialchars($d['img_pos'] ?? 'top center') ?>">
-        <div class="project-visual-kanji"><?= htmlspecialchars($d['kanji']) ?></div>
-      </div>
-
-      <?php else: ?>
-      <!-- Visuel placeholder -->
-      <div class="project-visual">
-        <div class="project-visual-sun"></div>
-        <div class="project-visual-frame"></div>
-        <div class="project-visual-kanji"><?= htmlspecialchars($d['kanji']) ?></div>
-        <div class="project-visual-label">[ Capture — <?= htmlspecialchars($p['title']) ?> ]</div>
-      </div>
-      <?php endif; ?>
-
-      <div>
-        <div class="project-meta">
-          <span class="num"><?= htmlspecialchars($d['num']) ?> / <?= $total ?></span>
-          <span><?= htmlspecialchars($d['year']) ?></span>
-          <span><?= htmlspecialchars($d['type'] ?: $p['type']) ?></span>
-        </div>
-        <h3 class="project-title"><?= htmlspecialchars($p['title']) ?></h3>
-        <p class="project-desc"><?= htmlspecialchars($p['desc']) ?></p>
-        <div class="project-stack">
-          <?php foreach ($p['techs'] as $tech): ?>
-          <span class="tag"><?= htmlspecialchars($tech) ?></span>
+        <!-- Images 3D -->
+        <div class="ct-images" id="ct-images">
+          <?php foreach ($projects as $i => $p):
+            $d = $projectsDesign[$i];
+          ?>
+          <img
+            class="ct-img"
+            src="<?= htmlspecialchars($d['screen']) ?>"
+            alt="<?= htmlspecialchars($p['title']) ?>"
+            data-index="<?= $i ?>"
+          >
           <?php endforeach; ?>
         </div>
-        <a href="<?= htmlspecialchars($d['url']) ?>" target="_blank" rel="noopener" class="project-link">
-          <?= htmlspecialchars($d['label']) ?>
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
+
+        <!-- Contenu -->
+        <div class="ct-content">
+          <div class="ct-slides" id="ct-slides">
+            <?php foreach ($projects as $i => $p):
+              $d = $projectsDesign[$i];
+            ?>
+            <div class="ct-slide" data-slide="<?= $i ?>">
+              <div class="ct-slide-meta">
+                <span class="ct-num"><?= $d['num'] ?> / <?= $total ?></span>
+                <span class="ct-year"><?= $d['year'] ?></span>
+              </div>
+              <h3 class="ct-title"><?= htmlspecialchars($p['title']) ?></h3>
+              <p class="ct-type"><?= htmlspecialchars($d['type']) ?></p>
+              <p class="ct-desc"><?= htmlspecialchars($p['desc']) ?></p>
+              <div class="ct-stack">
+                <?php foreach ($p['techs'] as $tech): ?>
+                <span class="tag"><?= htmlspecialchars($tech) ?></span>
+                <?php endforeach; ?>
+              </div>
+              <a href="<?= htmlspecialchars($d['url']) ?>" target="_blank" rel="noopener" class="project-link ct-link">
+                <?= htmlspecialchars($d['label']) ?>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <?php endforeach; ?>
+          </div>
+
+          <!-- Navigation -->
+          <div class="ct-arrows">
+            <button class="ct-btn" id="ct-prev" aria-label="Projet précédent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="ct-btn" id="ct-next" aria-label="Projet suivant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 19l7-7-7-7"/></svg>
+            </button>
+          </div>
+        </div>
+
       </div>
-    </article>
-    <?php endforeach; ?>
+    </div>
+
   </div>
 </section>

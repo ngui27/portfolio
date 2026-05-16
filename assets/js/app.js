@@ -57,6 +57,82 @@ document.addEventListener('DOMContentLoaded', function () {
     moon.style.display = html.dataset.theme === 'light' ? '' : 'none';
   }
 
+  // ---------- Circular Project Carousel ----------
+  (function () {
+    var imagesEl  = document.getElementById('ct-images');
+    var slidesEl  = document.getElementById('ct-slides');
+    var prevBtn   = document.getElementById('ct-prev');
+    var nextBtn   = document.getElementById('ct-next');
+    if (!imagesEl || !slidesEl) return;
+
+    var imgs   = Array.from(imagesEl.querySelectorAll('.ct-img'));
+    var slides = Array.from(slidesEl.querySelectorAll('.ct-slide'));
+    var total  = imgs.length;
+    var active = 0;
+    var autoTimer = null;
+
+    function calcGap() {
+      var w = imagesEl.offsetWidth;
+      if (w <= 1024) return 60;
+      if (w >= 1456) return Math.max(60, 86 + 0.06018 * (w - 1456));
+      return 60 + 26 * ((w - 1024) / (1456 - 1024));
+    }
+
+    function applyTransforms() {
+      var gap = calcGap();
+      var stickUp = gap * 0.8;
+      imgs.forEach(function (img, i) {
+        var offset = (i - active + total) % total;
+        var isLeft  = (active - 1 + total) % total === i;
+        var isRight = (active + 1) % total === i;
+        var isActive = i === active;
+        if (isActive) {
+          img.style.cssText = 'z-index:3;opacity:1;pointer-events:auto;transform:translateX(0) translateY(0) scale(1) rotateY(0deg);';
+        } else if (isLeft) {
+          img.style.cssText = 'z-index:2;opacity:1;pointer-events:auto;transform:translateX(-' + gap + 'px) translateY(-' + stickUp + 'px) scale(0.82) rotateY(15deg);';
+        } else if (isRight) {
+          img.style.cssText = 'z-index:2;opacity:1;pointer-events:auto;transform:translateX(' + gap + 'px) translateY(-' + stickUp + 'px) scale(0.82) rotateY(-15deg);';
+        } else {
+          img.style.cssText = 'z-index:1;opacity:0;pointer-events:none;transform:translateX(0) scale(0.7);';
+        }
+      });
+    }
+
+    function showSlide(idx) {
+      slides.forEach(function (s) { s.classList.remove('active'); });
+      if (slides[idx]) slides[idx].classList.add('active');
+    }
+
+    function goTo(idx) {
+      active = (idx + total) % total;
+      applyTransforms();
+      showSlide(active);
+    }
+
+    function startAuto() {
+      autoTimer = setInterval(function () { goTo(active + 1); }, 5000);
+    }
+    function stopAuto() { clearInterval(autoTimer); }
+
+    // Init
+    applyTransforms();
+    showSlide(0);
+    startAuto();
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { stopAuto(); goTo(active - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { stopAuto(); goTo(active + 1); });
+
+    // Clic sur une image latérale → active-la
+    imgs.forEach(function (img, i) {
+      img.addEventListener('click', function () {
+        if (i !== active) { stopAuto(); goTo(i); }
+      });
+    });
+
+    // Recalcule les transforms au resize
+    window.addEventListener('resize', applyTransforms, { passive: true });
+  })();
+
   // ---------- ContainerScroll 3D ----------
   var csContainers = document.querySelectorAll('[data-cs]');
   if (csContainers.length) {
