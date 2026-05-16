@@ -2,11 +2,10 @@
   <div class="bg-kanji" style="left:-4vw;top:0">人</div>
   <div class="container">
     <div class="about-grid">
-      <div class="about-visual reveal">
-        <div class="about-sun"></div>
+      <div class="about-visual about-visual--img reveal">
         <div class="about-vertical">開発者</div>
+        <img src="/assets/image/profil.png" alt="Ngui — Développeur web à Montréal">
         <div class="about-frame"></div>
-        <div class="about-label">[ Portrait à remplacer ]</div>
       </div>
       <div class="reveal" data-delay="1">
         <div class="section-eyebrow">À propos <span class="kanji">紹介</span></div>
