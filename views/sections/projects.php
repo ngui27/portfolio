@@ -3,11 +3,11 @@ $projectsDesign = [
   [
     'num'    => '01',
     'year'   => '2025',
-    'type'   => 'WordPress · ACF',
+    'type'   => 'WordPress · Elementor',
     'kanji'  => '家',
     'url'    => 'https://kocoonfamily.fr',
     'label'  => 'Voir le site',
-    'screen' => '/assets/image/kocoon.png',
+    'screen' => null, // screenshot à venir
   ],
   [
     'num'    => '02',
@@ -18,7 +18,26 @@ $projectsDesign = [
     'label'  => 'Voir l\'app',
     'screen' => null,
   ],
+  [
+    'num'    => '03',
+    'year'   => '2025',
+    'type'   => 'SaaS · Laravel',
+    'kanji'  => '宿',
+    'url'    => 'https://hostbook.dev',
+    'label'  => 'Voir le projet',
+    'screen' => null, // screenshot à venir
+  ],
+  [
+    'num'    => '04',
+    'year'   => '2025',
+    'type'   => 'Plugin WordPress',
+    'kanji'  => '管',
+    'url'    => 'https://kocoonfamily.fr/kocoon-manager',
+    'label'  => 'Voir le plugin',
+    'screen' => null, // screenshot à venir
+  ],
 ];
+$total = count($projectsDesign);
 ?>
 <section id="projets" class="section">
   <div class="container">
@@ -30,18 +49,26 @@ $projectsDesign = [
         </h2>
       </div>
       <p style="max-width:380px;color:var(--muted);font-size:16px;line-height:1.6">
-        Deux projets récents — l'un pour une marque montréalaise, l'autre
-        pour un réseau d'établissements. Discutons du vôtre.
+        Quatre projets récents — sites vitrines, applications métier, outils SaaS
+        et plugins WordPress. Discutons du vôtre.
       </p>
     </div>
 
     <?php foreach ($projects as $i => $p):
-      $d = $projectsDesign[$i] ?? ['num'=>'0'.($i+1),'year'=>'2025','type'=>'','kanji'=>'仕','url'=>$p['url'],'label'=>$p['link_label'],'screen'=>null];
+      $d = $projectsDesign[$i] ?? [
+        'num'   => str_pad($i+1, 2, '0', STR_PAD_LEFT),
+        'year'  => '2025',
+        'type'  => '',
+        'kanji' => '仕',
+        'url'   => $p['url'],
+        'label' => $p['link_label'],
+        'screen'=> null,
+      ];
     ?>
     <article class="project <?= $i % 2 === 1 ? 'reverse' : '' ?> reveal">
 
       <?php if (!empty($d['screen'])): ?>
-      <!-- Effet scroll 3D (ContainerScroll) -->
+      <!-- Capture réelle avec effet scroll 3D -->
       <div class="cs-container" data-cs>
         <div class="cs-stage">
           <div class="cs-card">
@@ -54,7 +81,7 @@ $projectsDesign = [
       </div>
 
       <?php else: ?>
-      <!-- Visuel placeholder -->
+      <!-- Visuel placeholder japonais -->
       <div class="project-visual">
         <div class="project-visual-sun"></div>
         <div class="project-visual-frame"></div>
@@ -65,7 +92,7 @@ $projectsDesign = [
 
       <div>
         <div class="project-meta">
-          <span class="num"><?= htmlspecialchars($d['num']) ?> / <?= count($projects) ?></span>
+          <span class="num"><?= htmlspecialchars($d['num']) ?> / <?= $total ?></span>
           <span><?= htmlspecialchars($d['year']) ?></span>
           <span><?= htmlspecialchars($d['type'] ?: $p['type']) ?></span>
         </div>
@@ -76,8 +103,8 @@ $projectsDesign = [
           <span class="tag"><?= htmlspecialchars($tech) ?></span>
           <?php endforeach; ?>
         </div>
-        <a href="<?= htmlspecialchars($p['url']) ?>" target="_blank" rel="noopener" class="project-link">
-          <?= htmlspecialchars($p['link_label']) ?>
+        <a href="<?= htmlspecialchars($d['url']) ?>" target="_blank" rel="noopener" class="project-link">
+          <?= htmlspecialchars($d['label']) ?>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
