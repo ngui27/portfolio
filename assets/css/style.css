@@ -623,10 +623,10 @@ html.js-reveal .reveal.in {
   overflow: hidden;
 }
 
-/* Variante avec image réelle — pas de bandes */
+/* Variante avec image réelle */
 .project-visual--img {
   background: none;
-  border: none;
+  border: 3px solid var(--vermillion); /* cadre = bordure extérieure */
   aspect-ratio: auto;
   height: 420px;
 }
@@ -639,18 +639,13 @@ html.js-reveal .reveal.in {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
   display: block;
 }
 .project-visual--img::before { display: none; }
-.project-visual--img .project-visual-frame {
-  border-color: var(--vermillion);
-  z-index: 2;
-}
 .project-visual--img .project-visual-kanji {
   z-index: 3;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.7);
 }
 
 .project-visual::before {

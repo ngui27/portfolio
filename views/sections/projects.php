@@ -1,40 +1,44 @@
 <?php
 $projectsDesign = [
   [
-    'num'    => '01',
-    'year'   => '2025',
-    'type'   => 'WordPress · Elementor',
-    'kanji'  => '家',
-    'url'    => 'https://kocoonfamily.fr',
-    'label'  => 'Voir le site',
-    'screen' => '/assets/image/ImageProjet/kocoonfamily.png',
+    'num'      => '01',
+    'year'     => '2025',
+    'type'     => 'WordPress · Elementor',
+    'kanji'    => '家',
+    'url'      => 'https://kocoonfamily.fr',
+    'label'    => 'Voir le site',
+    'screen'   => '/assets/image/ImageProjet/kocoonfamily.png',
+    'img_pos'  => 'center 12%', // skip whitespace du haut du screenshot
   ],
   [
-    'num'    => '02',
-    'year'   => '2024',
-    'type'   => 'Symfony · API',
-    'kanji'  => '酒',
-    'url'    => 'https://gestibar.ca',
-    'label'  => 'Voir l\'app',
-    'screen' => '/assets/image/ImageProjet/gestibar.png',
+    'num'      => '02',
+    'year'     => '2024',
+    'type'     => 'Symfony · API',
+    'kanji'    => '酒',
+    'url'      => 'https://gestibar.ca',
+    'label'    => 'Voir l\'app',
+    'screen'   => '/assets/image/ImageProjet/gestibar.png',
+    'img_pos'  => 'top center',
   ],
   [
-    'num'    => '03',
-    'year'   => '2025',
-    'type'   => 'Node.js · SaaS',
-    'kanji'  => '宿',
-    'url'    => 'https://hostbook.dev',
-    'label'  => 'Voir le projet',
-    'screen' => '/assets/image/ImageProjet/hostbook.png',
+    'num'      => '03',
+    'year'     => '2025',
+    'type'     => 'Node.js · SaaS',
+    'kanji'    => '宿',
+    'url'      => 'https://hostbook.dev',
+    'label'    => 'Voir le projet',
+    'screen'   => '/assets/image/ImageProjet/hostbook.png',
+    'img_pos'  => 'top center',
   ],
   [
-    'num'    => '04',
-    'year'   => '2025',
-    'type'   => 'Plugin WordPress',
-    'kanji'  => '管',
-    'url'    => 'https://kocoonfamily.fr/kocoon-manager',
-    'label'  => 'Voir le plugin',
-    'screen' => '/assets/image/ImageProjet/kocoonManager.png',
+    'num'      => '04',
+    'year'     => '2025',
+    'type'     => 'Plugin WordPress',
+    'kanji'    => '管',
+    'url'      => 'https://kocoonfamily.fr/kocoon-manager',
+    'label'    => 'Voir le plugin',
+    'screen'   => '/assets/image/ImageProjet/kocoonManager.png',
+    'img_pos'  => 'top center',
   ],
 ];
 $total = count($projectsDesign);
@@ -68,11 +72,11 @@ $total = count($projectsDesign);
     <article class="project <?= $i % 2 === 1 ? 'reverse' : '' ?> reveal">
 
       <?php if (!empty($d['screen'])): ?>
-      <!-- Capture réelle -->
+      <!-- Capture réelle : cadre = bordure extérieure du conteneur -->
       <div class="project-visual project-visual--img">
         <img src="<?= htmlspecialchars($d['screen']) ?>"
-             alt="Capture <?= htmlspecialchars($p['title']) ?>">
-        <div class="project-visual-frame"></div>
+             alt="Capture <?= htmlspecialchars($p['title']) ?>"
+             style="object-position:<?= htmlspecialchars($d['img_pos'] ?? 'top center') ?>">
         <div class="project-visual-kanji"><?= htmlspecialchars($d['kanji']) ?></div>
       </div>
 
