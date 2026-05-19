@@ -3,6 +3,7 @@ $page_title       = $page_title       ?? 'YéliDev — Développeur Web à Montr
 $page_description = $page_description ?? 'YéliDev — Développeur web à Montréal. Sites vitrines, applications web et outils personnalisés pour PME et entrepreneurs. Devis gratuit.';
 $page_canonical   = $page_canonical   ?? 'https://yelidev.ca/';
 $page_og_type     = $page_og_type     ?? 'website';
+$page_og_image    = $page_og_image    ?? 'https://yelidev.ca/assets/image/og-preview.png';
 ?>
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
@@ -22,7 +23,7 @@ $page_og_type     = $page_og_type     ?? 'website';
   <meta property="og:url" content="<?= htmlspecialchars($page_canonical) ?>">
   <meta property="og:title" content="<?= htmlspecialchars($page_title) ?>">
   <meta property="og:description" content="<?= htmlspecialchars($page_description) ?>">
-  <meta property="og:image" content="https://yelidev.ca/assets/image/og-preview.png">
+  <meta property="og:image" content="<?= htmlspecialchars($page_og_image) ?>">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="fr_CA">
@@ -31,7 +32,7 @@ $page_og_type     = $page_og_type     ?? 'website';
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?= htmlspecialchars($page_title) ?>">
   <meta name="twitter:description" content="<?= htmlspecialchars($page_description) ?>">
-  <meta name="twitter:image" content="https://yelidev.ca/assets/image/og-preview.png">
+  <meta name="twitter:image" content="<?= htmlspecialchars($page_og_image) ?>">
 
   <!-- Google Fonts — design japonais -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

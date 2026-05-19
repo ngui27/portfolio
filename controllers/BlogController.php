@@ -22,7 +22,8 @@ class BlogController
 
     public function show(string $slug): void
     {
-        $article = (new ArticleModel())->getBySlug($slug);
+        $model   = new ArticleModel();
+        $article = $model->getBySlug($slug);
 
         if ($article === null) {
             http_response_code(404);
@@ -34,10 +35,13 @@ class BlogController
             return;
         }
 
-        $page_title       = $article['title'] . ' — YéliDev';
+        $prev_article  = $model->getPrev($slug);
+        $next_article  = $model->getNext($slug);
+        $page_title    = $article['title'] . ' — YéliDev';
         $page_description = $article['excerpt'];
         $page_canonical   = 'https://yelidev.ca/blog/' . $article['slug'];
         $page_og_type     = 'article';
+        $page_og_image    = $article['og_image'] ?? 'https://yelidev.ca/assets/image/og-preview.png';
 
         require __DIR__ . '/../views/layout/head.php';
         require __DIR__ . '/../views/sections/nav.php';

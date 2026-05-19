@@ -17,4 +17,11 @@ config.local.php
 *.log
 vinyl_demo.html
 index_1.html
-claude.md.claude/worktrees/
+claude.md
+
+# Claude worktrees (temporaires)
+.claude/worktrees/
+
+# Images originales PNG non compressées (remplacées par WebP)
+assets/image/blog/*.png
+assets/image/blog/*-orig.png

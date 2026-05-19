@@ -11,8 +11,20 @@
       <?php foreach ($articles as $i => $a): ?>
       <a href="/blog/<?= htmlspecialchars($a['slug']) ?>" class="blog-card reveal" data-delay="<?= ($i % 3) + 1 ?>">
         <div class="blog-cover">
+          <?php if (!empty($a['cover_image'])): ?>
+          <img
+            src="<?= htmlspecialchars($a['cover_image']) ?>"
+            alt="<?= htmlspecialchars($a['title']) ?>"
+            class="blog-cover-img"
+            width="1730"
+            height="910"
+            loading="lazy"
+            decoding="async"
+          >
+          <?php else: ?>
           <div class="blog-cover-sun"></div>
           <div class="blog-cover-num"><?= str_pad($i + 1, 2, '0', STR_PAD_LEFT) ?></div>
+          <?php endif; ?>
         </div>
         <div class="blog-meta">
           <span class="cat"><?= htmlspecialchars($a['category']) ?></span>
