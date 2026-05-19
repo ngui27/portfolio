@@ -1,5 +1,10 @@
 RewriteEngine On
 
+# Markdown mirrors — servis en text/plain pour les crawlers IA
+<FilesMatch "\.md$">
+  AddType text/plain;charset=utf-8 .md
+</FilesMatch>
+
 # HTTPS redirect
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} !on

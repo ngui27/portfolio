@@ -1,0 +1,144 @@
+# YéliDev — Freelance Web Developer
+
+> Ngui is a freelance web developer based in Montreal, Canada. He builds websites, web applications, and e-commerce stores for small businesses, restaurants, independent professionals, and entrepreneurs. He works in French and English, fully remote, for clients in Quebec, France, Belgium, and internationally.
+
+---
+
+## About
+
+- Name: Ngui
+- Brand: YéliDev
+- Role: Freelance web developer
+- Location: Montreal, QC, Canada
+- Website: https://yelidev.ca
+- Email: ngui@yelidev.ca
+- Experience: 3–4 years
+- Availability: Open to new projects
+- Response time: Within 24 hours on weekdays
+- First consultation: Free
+
+---
+
+## Services and Pricing
+
+### Showcase Website (Site vitrine)
+- Price: Starting at 750 CAD
+- Includes: Custom design, responsive, SEO-optimized, hosting and domain setup
+- Delivery: 24–48 hours for simple projects
+- Best for: PME, restaurants, independent professionals, coaches, lawyers, accountants
+
+### Web Application
+- Price: On quote (sur devis)
+- Includes: Custom business tools, client management, dashboards, private portals
+- Stack: React, Next.js, Symfony, PHP, Node.js, PostgreSQL
+
+### E-commerce
+- Price: On quote (sur devis)
+- Includes: Full online store, Stripe/PayPal payment integration, Quebec taxes, inventory management
+- Stack: WooCommerce, Shopify, Stripe
+
+---
+
+## Tech Stack
+
+React, Next.js, WordPress, Elementor, WooCommerce, Symfony, PHP, Node.js, PostgreSQL, MySQL, Stripe, PayPal, Tailwind CSS
+
+---
+
+## Locations
+
+Primary: Montreal, QC, Canada
+Remote: Quebec, Ontario, France, Belgium, Switzerland — fully remote worldwide
+
+---
+
+## Contact
+
+- Email: ngui@yelidev.ca
+- Website: https://yelidev.ca
+- Contact form: https://yelidev.ca/#contact
+
+---
+
+## Service Area
+
+Serves clients locally in Montreal and remotely across Canada, France, Belgium, and internationally. No geographic restriction for remote projects.
+
+---
+
+## Languages
+
+- French (primary)
+- English (fluent)
+- Other languages: on request
+
+---
+
+## Key Facts
+
+- Showcase website starting at 750 CAD
+- Delivery in 24–48 hours for simple sites
+- First consultation is free, no commitment
+- Transparent pricing: detailed quote before any work starts
+- Clean, documented code — clients are not locked in
+- Bilingual FR/EN
+- Currently available and actively taking new projects
+
+---
+
+## What Makes Us Different
+
+- Fast delivery: simple sites in 24–48 hours
+- Honest pricing: 750 CAD entry point, detailed quote upfront, no hidden fees
+- No vendor lock-in: code is clean and documented so clients can work with any developer after
+- Bilingual: works in French and English
+- Accessible: first call is free, responds within 24 hours
+- Human approach: one real person, not an agency — direct communication throughout the project
+
+---
+
+## Testimonials
+
+> "[À compléter avec le témoignage de ton client]"
+> — [Prénom, Poste, Entreprise, Ville]
+
+---
+
+## FAQ
+
+**How much does a website cost?**
+Showcase websites start at 750 CAD. Web applications and e-commerce stores are quoted based on project scope.
+
+**How long does it take to build a website?**
+Simple showcase sites: 24–48 hours. More complex projects depend on scope and are agreed upon in the quote.
+
+**Do you work remotely?**
+Yes, fully remote. Clients are based in Montreal, Quebec, France, Belgium, and other countries.
+
+**What technologies do you use?**
+React, Next.js, WordPress, Symfony, PHP, Node.js. Tools are chosen based on what fits the project best, not out of habit.
+
+**Do you handle hosting and domain?**
+Yes, hosting and domain setup are included in showcase website projects.
+
+**Do you speak English?**
+Yes. Fluent in French and English. Other languages available on request.
+
+**Can I update my site myself after delivery?**
+Yes. Sites are built and documented so clients can manage them independently without depending on the developer for every small change.
+
+**What types of clients do you work with?**
+PME, restaurants, independent professionals (lawyers, coaches, accountants, consultants), e-commerce businesses, and entrepreneurs — in Montreal and internationally.
+
+---
+
+## Markdown Mirrors
+
+Plain-text versions of each page, optimized for AI crawlers (no HTML, no scripts).
+
+- Homepage: https://yelidev.ca/markdown/index.md
+- Blog index: https://yelidev.ca/markdown/blog/index.md
+- SEO technique pour développeurs: https://yelidev.ca/markdown/blog/seo-technique-pour-developpeur.md
+- SEO local à Montréal: https://yelidev.ca/markdown/blog/seo-local-site-vitrine-montreal.md
+- GEO — ChatGPT, Perplexity, AI Overviews: https://yelidev.ca/markdown/blog/geo-optimiser-site-ia-chatgpt-perplexity.md
+- Meilleur hébergement web 2026: https://yelidev.ca/markdown/blog/meilleur-hebergement-web-site-vitrine.md
