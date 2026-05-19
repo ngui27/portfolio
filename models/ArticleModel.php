@@ -56,18 +56,30 @@ class ArticleModel
                 'title'        => 'SEO technique : les fondations que tout développeur web doit maîtriser',
                 'excerpt'      => 'Balises meta, Core Web Vitals, données structurées, HTTPS… Un guide pratique de référencement technique pour développeurs qui veulent que leur site soit correctement indexé par Google.',
                 'date'         => '2026-04-10',
-                'date_updated' => '2026-05-10',
+                'date_updated' => '2026-05-19',
                 'category'     => 'SEO',
                 'read_time'    => 7,
                 'cover_image'  => '/assets/image/blog/cover-seo-technique-developpeur.webp',
                 'og_image'     => 'https://yelidev.ca/assets/image/blog/og-seo-technique-developpeur.jpg',
                 'keywords'     => 'SEO technique, référencement technique, Core Web Vitals, balises meta, données structurées, robots.txt, sitemap XML, développeur web',
+                'intro'        => <<<INTRO
+<p>Le <strong>référencement technique</strong> regroupe les optimisations de code et d'infrastructure qui permettent à Google de crawler, comprendre et indexer correctement un site. Sans ces bases, même un contenu excellent reste invisible dans les résultats de recherche — c'est pourquoi elles doivent être posées dès le lancement, pas ajoutées après coup.</p>
+<p>Voici les <strong>6 fondations incontournables</strong> du SEO technique :</p>
+<ul>
+  <li><strong>Balises meta</strong> — title unique (50–60 car.) et meta description (150–160 car.) sur chaque page</li>
+  <li><strong>Core Web Vitals</strong> — LCP &lt; 2,5 s, INP &lt; 200 ms, CLS &lt; 0,1, mesurés au 75e percentile sur de vrais utilisateurs Chrome (signal de classement Google depuis juin 2021)</li>
+  <li><strong>Sitemap XML</strong> soumis à Google Search Console</li>
+  <li><strong>Robots.txt</strong> configuré pour concentrer le budget de crawl sur les pages utiles</li>
+  <li><strong>Données structurées JSON-LD</strong> (Schema.org) pour que Google et les IA de recherche comprennent le contexte de chaque page</li>
+  <li><strong>HTTPS</strong> avec redirection 301 permanente et zéro mixed content</li>
+</ul>
+<p>Ce guide détaille chaque point avec les valeurs cibles, les erreurs les plus courantes et les outils gratuits pour tout auditer. Si vous confiez la création de votre site à un développeur, ces 6 éléments devraient être inclus par défaut dans toute prestation sérieuse.</p>
+INTRO,
                 'content'      => <<<HTML
-<p>Vous livrez du code propre, performant, bien architecturé — mais est-ce que Google peut réellement l'indexer et le comprendre ? Le <strong>SEO technique</strong>, c'est la couche invisible que la plupart des développeurs bâclent. Sans ces fondations, même le meilleur contenu reste invisible. Voici les points essentiels à mettre en place dès le lancement d'un site.</p>
 
 <figure class="article-img">
-  <img src="/assets/image/blog/5-piliers-seo-technique-infographie.webp" alt="Infographie des 5 piliers du SEO technique : balises meta, Core Web Vitals, indexation, sécurité et données structurées" loading="lazy" decoding="async">
-  <figcaption>Les 5 fondations du référencement technique à mettre en place sur tout site web</figcaption>
+  <img src="/assets/image/blog/5-piliers-seo-technique-infographie.webp" alt="Infographie des 6 piliers du SEO technique : balises meta, Core Web Vitals, sitemap XML, Schema.org, HTTPS et structure des URLs" loading="lazy" decoding="async">
+  <figcaption>Les 6 fondations du référencement technique à mettre en place sur tout site web</figcaption>
 </figure>
 
 <h2>1. Les balises meta : le minimum syndical du référencement technique</h2>
@@ -115,12 +127,12 @@ class ArticleModel
   <li><code>BlogPosting</code> pour les articles de blog</li>
   <li><code>FAQPage</code> pour les sections de questions fréquentes</li>
 </ul>
-<p>Ces marqueurs peuvent générer des <strong>rich snippets</strong> dans les résultats Google — étoiles, FAQ dépliables, extraits de recettes — ce qui augmente significativement le taux de clic (CTR) sans améliorer le classement directement.</p>
-<p>Pour aller plus loin sur le sujet, notre article <a href="/blog/geo-optimiser-site-ia-chatgpt-perplexity">GEO et données structurées pour les IA de recherche</a> détaille comment les schemas influencent également les réponses de ChatGPT et Perplexity.</p>
+<p>Certains schemas génèrent des <strong>rich snippets</strong> dans les résultats Google (étoiles, extraits de prix, fil d'Ariane) qui augmentent le taux de clic sans améliorer directement le classement. <strong>Note :</strong> depuis août 2023, les rich snippets FAQ en SERP sont réservés aux sites gouvernementaux et de santé — mais le schema <code>FAQPage</code> reste pertinent pour les IA de recherche (ChatGPT, Perplexity, Google AI Overviews) qui s'en servent pour générer des réponses structurées.</p>
+<p>Pour aller plus loin sur le sujet, notre article <a href="/blog/geo-optimiser-site-ia-chatgpt-perplexity">GEO et données structurées pour les IA de recherche</a> détaille comment les schemas influencent les réponses de ChatGPT et Perplexity.</p>
 
 <figure class="article-img">
-  <img src="/assets/image/blog/rich-snippet-google-schema-faq-markup.webp" alt="Exemple de rich snippet Google avec section FAQ dépliable générée grâce aux données structurées Schema.org" loading="lazy" decoding="async">
-  <figcaption>Les rich snippets FAQ générés par Schema.org augmentent la visibilité et le taux de clic dans les résultats Google</figcaption>
+  <img src="/assets/image/blog/rich-snippet-google-schema-faq-markup.webp" alt="Exemple de rich snippet Google avec section FAQ et données structurées JSON-LD Schema.org visibles dans les DevTools" loading="lazy" decoding="async">
+  <figcaption>Les données structurées JSON-LD permettent à Google et aux IA de recherche de comprendre le contexte de votre page — certains schemas génèrent des rich snippets dans les SERPs</figcaption>
 </figure>
 
 <h2>5. HTTPS et en-têtes de sécurité : confiance et classement</h2>
@@ -177,6 +189,17 @@ HTML,
                 'cover_image'  => '/assets/image/blog/cover-seo-local-montreal.webp',
                 'og_image'     => 'https://yelidev.ca/assets/image/blog/og-seo-local-montreal.jpg',
                 'keywords'     => 'SEO local Montréal, référencement local Québec, Google Business Profile, NAP, LocalBusiness schema, avis Google, citations locales, site vitrine Montréal',
+                'intro'        => <<<INTRO
+<p>Pour qu'une PME ou un entrepreneur à Montréal apparaisse dans les résultats de <strong>recherche locale</strong> sur Google, cinq leviers sont déterminants :</p>
+<ul>
+  <li><strong>Google Business Profile</strong> — fiche complète (catégorie précise, photos, description de 750 car., horaires à jour) : c'est le levier numéro un du <strong>SEO local à Montréal</strong></li>
+  <li><strong>Cohérence NAP</strong> — Nom, Adresse, Téléphone <em>rigoureusement identiques</em> sur votre site, votre fiche GBP et tous les annuaires québécois</li>
+  <li><strong>Signaux on-page géolocalisés</strong> — ville et quartiers mentionnés dans le title, le H1 et le contenu ; schema <code>LocalBusiness</code> JSON-LD</li>
+  <li><strong>Avis Google</strong> — quantité, note moyenne et fréquence influencent directement votre position dans le Local Pack</li>
+  <li><strong>Citations locales</strong> — présence sur Pages Jaunes Canada, Yelp Canada, Clutch.co et la Chambre de commerce de Montréal</li>
+</ul>
+<p>Ces cinq leviers sont accessibles à toute entreprise locale sans budget publicitaire. Un site vitrine bien optimisé localement génère un flux de trafic qualifié en continu — contrairement aux annonces Google Ads qui s'arrêtent dès que le budget est coupé. Ce guide détaille comment mettre chaque levier en place.</p>
+INTRO,
                 'content'      => <<<HTML
 <p>Chaque mois, des milliers de Québécois tapent sur Google "développeur web Montréal", "agence web Laval" ou "site vitrine pas cher Québec". Si votre site n'apparaît pas dans ces résultats de <strong>recherche locale</strong>, vous perdez des clients au profit de vos concurrents — sans même le savoir. Le <strong>SEO local à Montréal</strong> n'est pas réservé aux grandes entreprises : c'est précisément l'outil qui permet aux PME et indépendants de rivaliser avec les gros budgets publicitaires.</p>
 
@@ -284,6 +307,18 @@ HTML,
                 'cover_image'  => '/assets/image/blog/cover-geo-ia-chatgpt-perplexity.webp',
                 'og_image'     => 'https://yelidev.ca/assets/image/blog/og-geo-ia-chatgpt-perplexity.jpg',
                 'keywords'     => 'GEO, Generative Engine Optimization, AI Overviews, ChatGPT SEO, Perplexity optimisation, llms.txt, E-E-A-T, zero-click search, référencement IA 2026',
+                'intro'        => <<<INTRO
+<p>Le <strong>GEO (Generative Engine Optimization)</strong> désigne l'ensemble des pratiques qui permettent à votre contenu d'être sélectionné et cité par les moteurs de recherche basés sur l'IA : Google AI Overviews, ChatGPT (navigation web), Perplexity et Bing Copilot. En 2026, les pages citées dans les AI Overviews gagnent en moyenne <strong>120 % de clics organiques supplémentaires</strong> par rapport aux pages non citées sur les mêmes requêtes (BrightEdge, 2026).</p>
+<p>Cinq leviers concrets permettent d'optimiser votre site pour les IA de recherche :</p>
+<ul>
+  <li><strong>Écrire pour les passages</strong> — chaque H2 doit répondre complètement à une question dès les premières lignes, sans introduction vague</li>
+  <li><strong>E-E-A-T</strong> — auteur identifié avec photo et bio, date de mise à jour visible, sources citées, expériences vécues originales</li>
+  <li><strong>Fichier llms.txt</strong> — guider les crawlers d'IA vers votre contenu pertinent, comme un robots.txt pour les LLM</li>
+  <li><strong>Données structurées JSON-LD</strong> — <code>FAQPage</code>, <code>Article</code>, <code>Person</code> pour que les IA comprennent le type et le contexte de chaque page</li>
+  <li><strong>Digital PR</strong> — multiplier vos mentions sur des sources variées et crédibles pour exister dans les données des modèles de langage</li>
+</ul>
+<p>Ce guide détaille chaque levier avec des exemples concrets. Le GEO s'appuie sur les mêmes fondations techniques que le SEO — si vous n'avez pas encore posé ces bases, commencez par notre guide <a href="/blog/seo-technique-pour-developpeur">SEO technique pour développeurs</a>.</p>
+INTRO,
                 'content'      => <<<HTML
 <p>En 2026, chercher une information sur Google ne retourne plus toujours une liste de liens. Pour des millions de requêtes, Google affiche une <strong>réponse synthétique générée par l'IA</strong> — les AI Overviews — avant même les résultats classiques. ChatGPT répond à des questions qui auraient jadis mené sur votre site. Perplexity cite directement ses sources. C'est ce changement qui a fait émerger une nouvelle pratique : le <strong>GEO (Generative Engine Optimization)</strong>.</p>
 
@@ -298,7 +333,7 @@ HTML,
 <p>Le GEO s'appuie sur les mêmes fondations techniques que le SEO. Si vous n'avez pas encore posé ces bases, notre article <a href="/blog/seo-technique-pour-developpeur">SEO technique pour développeurs</a> est le point de départ indispensable.</p>
 
 <h2>Pourquoi le GEO va devenir aussi important que le SEO</h2>
-<p>Les <strong>AI Overviews de Google</strong> apparaissent sur plus de 30 % des requêtes informationnelles — parfois plus de 60 % sur les requêtes du type "comment faire X" ou "qu'est-ce que Y". Les utilisateurs qui obtiennent une réponse directe de l'IA cliquent moins sur les liens organiques — c'est ce qu'on appelle le phénomène de "zero-click search".</p>
+<p>Les <strong>AI Overviews de Google</strong> apparaissent sur une part croissante des requêtes : selon BrightEdge, environ 48 % des requêtes trackées en début 2026, et jusqu'à 60 % selon Advanced Web Ranking — avec une surreprésentation sur les requêtes informationnelles du type "comment faire X" ou "qu'est-ce que Y". Les utilisateurs qui obtiennent une réponse directe de l'IA cliquent moins sur les liens organiques — c'est ce qu'on appelle le phénomène de "zero-click search".</p>
 <p>Pour les créateurs de contenu et les développeurs web, cela signifie qu'il ne suffit plus d'être bien classé sur Google. Il faut aussi être la source que l'IA choisit de citer.</p>
 
 <figure class="article-img">
@@ -342,7 +377,7 @@ HTML,
 <p>Les <strong>données structurées</strong> sont encore plus importantes pour le GEO que pour le SEO classique. Elles permettent aux IA de comprendre immédiatement le type, le contexte et la fiabilité de votre contenu sans avoir à l'interpréter. Les schemas les plus efficaces pour le <strong>Generative Engine Optimization</strong> :</p>
 <ul>
   <li><code>FAQPage</code> — idéal pour apparaître dans les AI Overviews sur des questions fréquentes</li>
-  <li><code>HowTo</code> — parfait pour les guides étape par étape que ChatGPT et Perplexity adorent citer</li>
+  <li><code>HowTo</code> — structure vos guides étape par étape pour les IA (Google a retiré les HowTo rich results des SERPs en septembre 2023, mais le schema reste utile pour la compréhension par les LLM)</li>
   <li><code>Article</code> / <code>BlogPosting</code> — signale à l'IA que le contenu est journalistique et citable</li>
   <li><code>Person</code> — renforce l'autorité de l'auteur auprès des modèles de langage</li>
 </ul>
@@ -394,6 +429,19 @@ HTML,
                 'cover_image'  => '/assets/image/blog/cover-hebergement-web-o2switch.webp',
                 'og_image'     => 'https://yelidev.ca/assets/image/blog/og-hebergement-web-o2switch.jpg',
                 'keywords'     => 'hébergement web, o2switch avis, meilleur hébergeur 2026, hébergement mutualisé, VPS, NVMe, hébergement site vitrine, Core Web Vitals hébergement',
+                'intro'        => <<<INTRO
+<p>Le choix de l'<strong>hébergement web</strong> impacte directement trois métriques SEO critiques : le TTFB (temps de réponse serveur), le LCP et la disponibilité du site. Un hébergeur lent plombe vos Core Web Vitals avant même que Google évalue votre contenu.</p>
+<p>Six critères permettent de séparer les bons hébergeurs des mauvais :</p>
+<ul>
+  <li><strong>Stockage NVMe</strong> — jusqu'à 7× plus rapide que les SSD classiques, impact direct sur le TTFB</li>
+  <li><strong>Uptime garanti ≥ 99,9 %</strong> — vérifiez les rapports indépendants, pas seulement les promesses marketing</li>
+  <li><strong>SSL gratuit automatique</strong> — Let's Encrypt inclus sans configuration manuelle</li>
+  <li><strong>Serveurs en France ou en Europe</strong> — latence réduite pour les sites francophones, conformité RGPD native</li>
+  <li><strong>Sauvegardes quotidiennes automatiques</strong> — restauration simple et gratuite incluse</li>
+  <li><strong>Support francophone compétent</strong> — réactif et techniquement utile, pas des réponses génériques</li>
+</ul>
+<p>Après avoir testé OVH, Infomaniak, PlanetHoster et Hostinger sur des projets clients réels, j'utilise <strong>o2switch</strong> comme hébergeur de référence. Ce guide explique pourquoi — avec les offres, les prix actuels et ce que j'aurais aimé savoir avant de choisir mon premier hébergeur.</p>
+INTRO,
                 'content'      => <<<HTML
 <p class="article-disclosure">🔗 <em>Cet article contient des liens affiliés vers o2switch. Si vous souscrivez via ces liens, je perçois une commission — sans surcoût pour vous. Je ne recommande que les outils que j'utilise réellement dans mes projets clients.</em></p>
 
@@ -487,7 +535,7 @@ HTML,
 <p>o2switch propose plusieurs formules adaptées à différents profils :</p>
 <ul>
   <li><strong>Grow</strong> (7 €/mois) : idéal pour débuter, un seul site, ressources modérées. Parfait pour un premier <strong>site vitrine</strong>.</li>
-  <li><strong>Cloud</strong> (offre vedette, souvent à moins de 2 €/mois en promotion) : accès à 12 vCPU et 48 Go de RAM. Excellent rapport qualité/prix pour un professionnel ou une agence.</li>
+  <li><strong>Cloud</strong> (12 €/mois HT, souvent autour de 1,86 €/mois la première année en promotion) : 12 vCPU et 48 Go de RAM. Excellent rapport qualité/prix pour un professionnel ou une agence.</li>
   <li><strong>Pro</strong> (6,25 €/mois) : 24 vCPU et 64 Go de RAM pour les projets à fort trafic ou les boutiques e-commerce actives.</li>
 </ul>
 <p>Pour la majorité des PME et entrepreneurs, l'<strong>offre Cloud</strong> représente le meilleur compromis — des ressources largement suffisantes pour plusieurs sites, à un prix très compétitif.</p>

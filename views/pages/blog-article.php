@@ -14,6 +14,12 @@
     <p class="article-excerpt"><?= htmlspecialchars($article['excerpt']) ?></p>
   </header>
 
+  <?php if (!empty($article['intro'])): ?>
+  <div class="article-intro">
+    <?= $article['intro'] ?>
+  </div>
+  <?php endif; ?>
+
   <?php if (!empty($article['cover_image'])): ?>
   <div class="article-hero">
     <img
