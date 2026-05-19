@@ -1585,6 +1585,16 @@ main, .footer { position: relative; z-index: 1; }
   margin: 0;
 }
 
+.article-intro {
+  font-size: 18px;
+  line-height: 1.75;
+  padding: 32px 0 0;
+}
+.article-intro p { margin: 0 0 20px; }
+.article-intro strong { font-weight: 700; }
+.article-intro ul { padding-left: 28px; margin: 0 0 20px; }
+.article-intro li { margin-bottom: 10px; }
+
 .article-body {
   font-size: 18px;
   line-height: 1.75;
