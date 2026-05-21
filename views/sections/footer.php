@@ -32,7 +32,7 @@
       <div class="footer-col">
         <h5>Contact</h5>
         <ul>
-          <li><a href="mailto:ngui@yelidev.ca">ngui@yelidev.ca</a></li>
+          <li><a href="mailto:ngui27@yelidev.ca">ngui27@yelidev.ca</a></li>
           <li>Montréal, QC</li>
           <li><a href="https://github.com/ngui27/" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="#">LinkedIn</a></li>

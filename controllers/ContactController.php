@@ -2,7 +2,7 @@
 
 class ContactController
 {
-    private const DEST       = 'ngui@yelidev.ca';
+    private const DEST       = 'ngui27@yelidev.ca';
     private const MAX_HOURLY = 3;
 
     public function send(): void

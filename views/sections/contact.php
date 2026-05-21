@@ -19,7 +19,7 @@ if (empty($_SESSION['csrf_token'])) {
 
         <div class="contact-block">
           <div class="label">Courriel direct</div>
-          <div class="value"><a href="mailto:ngui@yelidev.ca">ngui@yelidev.ca</a></div>
+          <div class="value"><a href="mailto:ngui27@yelidev.ca">ngui27@yelidev.ca</a></div>
         </div>
         <div class="contact-block">
           <div class="label">Sur le web</div>
@@ -30,7 +30,7 @@ if (empty($_SESSION['csrf_token'])) {
             <a href="#" class="social" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V8h3v11zM6.5 6.7a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5zM19 19h-3v-5.6c0-1.4-.5-2.4-1.7-2.4a1.85 1.85 0 0 0-1.7 1.2 2.4 2.4 0 0 0-.1.8V19h-3V8h3v1.3A3 3 0 0 1 15.2 8c2 0 3.5 1.3 3.5 4.1V19z"/></svg>
             </a>
-            <a href="mailto:ngui@yelidev.ca" class="social" aria-label="Courriel">
+            <a href="mailto:ngui27@yelidev.ca" class="social" aria-label="Courriel">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
             </a>
           </div>
